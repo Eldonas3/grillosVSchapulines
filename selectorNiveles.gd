@@ -16,5 +16,6 @@ func _on_regresar_pressed():
 	get_tree().change_scene_to_file("res://menu_inicial.tscn")
 
 
-func _on__pressed():
-	get_tree().change_scene_to_file("res://tarjetasBichos/fichaBicho1.tscn")
+func _on__pressed(nombre):
+	get_tree().change_scene_to_file("res://tarjetasBichos/fichaBicho"+nombre+".tscn")
+

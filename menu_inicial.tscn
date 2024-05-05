@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://deerec2lnou8p"]
+[gd_scene load_steps=7 format=3 uid="uid://deerec2lnou8p"]
 
 [ext_resource type="Script" path="res://menu_inicial.gd" id="1_2qhmk"]
 [ext_resource type="Texture2D" uid="uid://b3p0of3faoypy" path="res://backgrounds/propuestaBackground.jpeg" id="2_q4c41"]
+[ext_resource type="FontFile" uid="uid://cltbjfo3rmrjk" path="res://tipografia/Blockbuster- DEMO.otf" id="5_hfug5"]
 [ext_resource type="Texture2D" uid="uid://dfpjva5u4a0v6" path="res://botones/botonRectangular.png" id="5_hop4w"]
+[ext_resource type="Texture2D" uid="uid://du05p2lq8shu4" path="res://fondoTituloPrincipal.png" id="5_uagoa"]
 [ext_resource type="Texture2D" uid="uid://bhrf536363qb" path="res://botones/botonRectangularPresionado.png" id="6_bn7so"]
 
 [node name="menu_inicial" type="Node2D"]
@@ -14,10 +16,10 @@ scale = Vector2(0.598958, 0.603704)
 texture = ExtResource("2_q4c41")
 
 [node name="jugar" type="TextureButton" parent="."]
-offset_left = 396.0
-offset_top = 276.0
-offset_right = 715.0
-offset_bottom = 444.0
+offset_left = 180.0
+offset_top = 428.0
+offset_right = 499.0
+offset_bottom = 596.0
 texture_normal = ExtResource("5_hop4w")
 texture_pressed = ExtResource("6_bn7so")
 
@@ -26,25 +28,26 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = 8.0
-offset_right = -1.0
-offset_bottom = -21.0
+offset_left = -6.0
+offset_top = 13.0
+offset_right = -6.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("5_hfug5")
+theme_override_font_sizes/font_size = 80
 text = "JUGAR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="salir" type="TextureButton" parent="."]
-offset_left = 397.0
-offset_top = 447.0
-offset_right = 716.0
-offset_bottom = 615.0
+offset_left = 664.0
+offset_top = 424.0
+offset_right = 983.0
+offset_bottom = 592.0
 texture_normal = ExtResource("5_hop4w")
 texture_pressed = ExtResource("6_bn7so")
 
@@ -53,12 +56,17 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("5_hfug5")
+theme_override_font_sizes/font_size = 80
 text = "SALIR
 "
 horizontal_alignment = 1
@@ -69,6 +77,26 @@ offset_left = 188.0
 offset_top = 125.0
 offset_right = 228.0
 offset_bottom = 165.0
+
+[node name="marcoTitulo" type="Sprite2D" parent="."]
+position = Vector2(570, 201)
+scale = Vector2(1.10111, 0.951417)
+texture = ExtResource("5_uagoa")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 357.0
+offset_top = 24.0
+offset_right = 781.0
+offset_bottom = 363.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_hfug5")
+theme_override_font_sizes/font_size = 80
+text = "GRILLOS
+VS
+CHAPULINES"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]

@@ -1,47 +1,47 @@
-[gd_scene load_steps=10 format=3 uid="uid://di1as47dqw8m1"]
+[gd_scene load_steps=10 format=3 uid="uid://ceguns2y4oyu8"]
 
-[ext_resource type="Script" path="res://tarjetasBichos/fichaBicho1.gd" id="1_deixq"]
-[ext_resource type="Texture2D" uid="uid://d0gci4nch40pn" path="res://tarjetasBichos/FichaBase.png" id="2_ua6yr"]
-[ext_resource type="Texture2D" uid="uid://dtpdi4hhxy0v4" path="res://iconos/omnivoro.png" id="3_bwu1c"]
-[ext_resource type="FontFile" uid="uid://8a6i4hqyn1ap" path="res://tipografia/Deep Hero.ttf" id="4_ps6cc"]
-[ext_resource type="Texture2D" uid="uid://duacvnl3edgud" path="res://backgrounds/propuestaBackgroundLibreria.png" id="4_ssgc5"]
-[ext_resource type="Texture2D" uid="uid://btpen28g6vcj4" path="res://imagenesInsectos/saltamontes.jpg" id="4_tvwod"]
-[ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="5_1sd3t"]
-[ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="6_0youl"]
-[ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="7_ncixg"]
+[ext_resource type="Script" path="res://tarjetasBichos/fichaBicho1.gd" id="1_tlaai"]
+[ext_resource type="Texture2D" uid="uid://cyjbgw8blmssi" path="res://imagenesInsectos/jumil.jpg" id="2_iq2hf"]
+[ext_resource type="Texture2D" uid="uid://d0gci4nch40pn" path="res://tarjetasBichos/FichaBase.png" id="3_itbha"]
+[ext_resource type="FontFile" uid="uid://8a6i4hqyn1ap" path="res://tipografia/Deep Hero.ttf" id="4_1gqgn"]
+[ext_resource type="Texture2D" uid="uid://ecywh63jmrq4" path="res://iconos/sangre.png" id="5_3c1r6"]
+[ext_resource type="Texture2D" uid="uid://duacvnl3edgud" path="res://backgrounds/propuestaBackgroundLibreria.png" id="6_qyda6"]
+[ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="7_yqner"]
+[ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="8_uahoj"]
+[ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="9_oyd8a"]
 
 [node name="fichaSaltamontes" type="Node2D"]
-script = ExtResource("1_deixq")
+script = ExtResource("1_tlaai")
 
 [node name="bicho" type="Sprite2D" parent="."]
-position = Vector2(578.512, 178.708)
-scale = Vector2(0.563719, 0.461167)
-texture = ExtResource("4_tvwod")
+position = Vector2(584.5, 188.5)
+scale = Vector2(0.602865, 0.474609)
+texture = ExtResource("2_iq2hf")
 
 [node name="tarjeta" type="Sprite2D" parent="."]
 position = Vector2(584.653, 325.039)
 scale = Vector2(1.51985, 1.37196)
-texture = ExtResource("2_ua6yr")
+texture = ExtResource("3_itbha")
 
 [node name="nombreComun" type="Label" parent="."]
 offset_left = 365.653
-offset_top = 20.039
+offset_top = 17.039
 offset_right = 508.653
-offset_bottom = 70.039
+offset_bottom = 67.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_ps6cc")
+theme_override_fonts/font = ExtResource("4_1gqgn")
 theme_override_font_sizes/font_size = 36
-text = "GRILLO"
+text = "JUMIL"
 
 [node name="nombreCientifico" type="Label" parent="."]
 offset_left = 365.653
 offset_top = 298.039
-offset_right = 574.653
+offset_right = 656.653
 offset_bottom = 326.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_ps6cc")
+theme_override_fonts/font = ExtResource("4_1gqgn")
 theme_override_font_sizes/font_size = 20
-text = "ACHETA DOMESTICUS"
+text = "ATIZIES TAXCOENSIS"
 
 [node name="tamanio" type="Label" parent="."]
 offset_left = 390.653
@@ -49,20 +49,20 @@ offset_top = 567.039
 offset_right = 515.653
 offset_bottom = 595.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_ps6cc")
+theme_override_fonts/font = ExtResource("4_1gqgn")
 theme_override_font_sizes/font_size = 22
-text = "1.9 - 3.0 cm"
+text = "0.5 - 1 cm"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="cuerpo" type="Label" parent="."]
-offset_left = 377.653
-offset_top = 377.039
-offset_right = 815.653
-offset_bottom = 467.039
+offset_left = 378.0
+offset_top = 377.0
+offset_right = 791.0
+offset_bottom = 467.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Cuerpo esbelto cilíndrico, con 3 patas articuladas y antenas que pueden ser más largas que su cuerpo."
+text = "En forma de escudo, ancho y aplanado. Además, tiene antenas marcadas en 5 segmentos"
 autowrap_mode = 2
 
 [node name="color" type="Label" parent="."]
@@ -72,28 +72,28 @@ offset_right = 672.653
 offset_bottom = 549.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Café a negro/marrón amarillento con franjas oscuras en la cabeza y abdomen."
+text = "Dependiendo de la zona, puede ser gris, varde brillante o una combinación de ambos colores"
 autowrap_mode = 2
 
 [node name="icono" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(754, 71)
 scale = Vector2(0.416424, 0.409223)
-texture = ExtResource("3_bwu1c")
+texture = ExtResource("5_3c1r6")
 
 [node name="fondo" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(581.5, 324)
+position = Vector2(580, 326)
 scale = Vector2(1.86102, 2.576)
-texture = ExtResource("4_ssgc5")
+texture = ExtResource("6_qyda6")
 
 [node name="regresar" type="TextureButton" parent="."]
 offset_left = 36.0
 offset_top = 26.0
 offset_right = 112.0
 offset_bottom = 102.0
-texture_normal = ExtResource("5_1sd3t")
-texture_pressed = ExtResource("6_0youl")
+texture_normal = ExtResource("7_yqner")
+texture_pressed = ExtResource("8_uahoj")
 
 [node name="TextureRect" type="TextureRect" parent="regresar"]
 layout_mode = 1
@@ -108,6 +108,6 @@ offset_right = 26.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_ncixg")
+texture = ExtResource("9_oyd8a")
 
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]

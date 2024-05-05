@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgwmdpa2phecu"]
+[gd_scene load_steps=4 format=3 uid="uid://dgwmdpa2phecu"]
 
 [ext_resource type="Texture2D" uid="uid://dil50iolp2raa" path="res://botones/botonCuadrado.png" id="1_qwvec"]
 [ext_resource type="Texture2D" uid="uid://enk7r6a7eqfa" path="res://botones/botonCuadradoPresionado.png" id="2_nmv24"]
+[ext_resource type="FontFile" uid="uid://cvqrde66lk18q" path="res://tipografia/04B_30__.TTF" id="3_l5ets"]
 
 [node name="1" type="TextureButton"]
 offset_right = 40.0
@@ -16,8 +17,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "
-"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_l5ets")
+theme_override_font_sizes/font_size = 80
 horizontal_alignment = 1
 vertical_alignment = 1

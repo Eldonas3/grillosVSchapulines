@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1i1hs41grecy"
-path="res://.godot/imported/hormigatortuga - copia.jpg-75caaf332ac1e86863fc0f952df4543a.ctex"
+uid="uid://cywaiwtmo3ays"
+path="res://.godot/imported/escarabajo.jpg-eb29d330c64aa72d8328e22d58dab6f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenesInsectos/hormigatortuga - copia.jpg"
-dest_files=["res://.godot/imported/hormigatortuga - copia.jpg-75caaf332ac1e86863fc0f952df4543a.ctex"]
+source_file="res://imagenesInsectos/escarabajo.jpg"
+dest_files=["res://.godot/imported/escarabajo.jpg-eb29d330c64aa72d8328e22d58dab6f2.ctex"]
 
 [params]
 
