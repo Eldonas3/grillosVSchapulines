@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgwmdpa2phecu"]
+
+[ext_resource type="Texture2D" uid="uid://c2tq0my2vdkb7" path="res://botonNivelesBase.png" id="1_7d2a5"]
+[ext_resource type="Texture2D" uid="uid://bi44vn0utowxq" path="res://chinchejumil.jpg" id="2_4ajis"]
+
+[node name="1" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_7d2a5")
+texture_pressed = ExtResource("2_4ajis")
+texture_disabled = ExtResource("1_7d2a5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
