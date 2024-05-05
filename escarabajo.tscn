@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyig28ru5a8wy"]
 
 [ext_resource type="Script" path="res://escarabajo.gd" id="1_vdwgf"]
-[ext_resource type="Texture2D" uid="uid://d0nvthxqxjyku" path="res://Imagenes inovatec/escarabajo-Photoroom.png-Photoroom.png" id="2_oakmy"]
+[ext_resource type="Texture2D" uid="uid://d0nvthxqxjyku" path="res://imagenesInsectos/escarabajo-Photoroom.png-Photoroom.png" id="2_oakmy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mseyb"]
 size = Vector2(95, 53)
