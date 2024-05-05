@@ -1,52 +1,74 @@
-[gd_scene load_steps=4 format=3 uid="uid://deerec2lnou8p"]
+[gd_scene load_steps=5 format=3 uid="uid://deerec2lnou8p"]
 
-[ext_resource type="Texture2D" uid="uid://dt6rgxr6cdq85" path="res://grassAndFlowerTiles_S.png" id="1_p1r0p"]
-[ext_resource type="Texture2D" uid="uid://bdsr0i2o6cprw" path="res://Imagenes inovatec/chapulinareana-removebg-preview.png" id="2_a3s0o"]
-[ext_resource type="Texture2D" uid="uid://n6040o8kwmhr" path="res://Imagenes inovatec/chapulinoscuro-removebg-preview.png" id="3_vgfmw"]
+[ext_resource type="Script" path="res://menu_inicial.gd" id="1_2qhmk"]
+[ext_resource type="Texture2D" uid="uid://b3p0of3faoypy" path="res://backgrounds/propuestaBackground.jpeg" id="2_q4c41"]
+[ext_resource type="Texture2D" uid="uid://dfpjva5u4a0v6" path="res://botones/botonRectangular.png" id="5_hop4w"]
+[ext_resource type="Texture2D" uid="uid://bhrf536363qb" path="res://botones/botonRectangularPresionado.png" id="6_bn7so"]
 
 [node name="menu_inicial" type="Node2D"]
+script = ExtResource("1_2qhmk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(188, 125)
-scale = Vector2(3.88542, 3.14557)
-texture = ExtResource("1_p1r0p")
+position = Vector2(579, 322)
+scale = Vector2(0.598958, 0.603704)
+texture = ExtResource("2_q4c41")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 40.0
-offset_top = 80.0
-offset_right = 344.0
-offset_bottom = 122.0
-theme_override_font_sizes/font_size = 30
-text = "Grillos VS Chapulines"
+[node name="jugar" type="TextureButton" parent="."]
+offset_left = 396.0
+offset_top = 276.0
+offset_right = 715.0
+offset_bottom = 444.0
+texture_normal = ExtResource("5_hop4w")
+texture_pressed = ExtResource("6_bn7so")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 112.0
-offset_top = 136.0
-offset_right = 264.0
-offset_bottom = 167.0
+[node name="Label" type="Label" parent="jugar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 8.0
+offset_right = -1.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "JUGAR"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Jugar
+[node name="salir" type="TextureButton" parent="."]
+offset_left = 397.0
+offset_top = 447.0
+offset_right = 716.0
+offset_bottom = 615.0
+texture_normal = ExtResource("5_hop4w")
+texture_pressed = ExtResource("6_bn7so")
+
+[node name="Label" type="Label" parent="salir"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "SALIR
 "
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
-offset_left = 112.0
-offset_top = 185.0
-offset_right = 264.0
-offset_bottom = 216.0
+[node name="imagenFondo" type="TextureRect" parent="."]
+offset_left = 188.0
+offset_top = 125.0
+offset_right = 228.0
+offset_bottom = 165.0
 
-[node name="Button" type="Button" parent="VBoxContainer2"]
-layout_mode = 2
-text = "Salir
-"
-
-[node name="Chapulinareana-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(312, 184)
-scale = Vector2(0.121212, 0.133333)
-texture = ExtResource("2_a3s0o")
-
-[node name="Chapulinoscuro-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(64, 192)
-scale = Vector2(0.138889, 0.142157)
-texture = ExtResource("3_vgfmw")
+[connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]

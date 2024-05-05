@@ -1,14 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgwmdpa2phecu"]
 
-[ext_resource type="Texture2D" uid="uid://c2tq0my2vdkb7" path="res://botonNivelesBase.png" id="1_7d2a5"]
-[ext_resource type="Texture2D" uid="uid://bi44vn0utowxq" path="res://chinchejumil.jpg" id="2_4ajis"]
+[ext_resource type="Texture2D" uid="uid://dil50iolp2raa" path="res://botones/botonCuadrado.png" id="1_qwvec"]
+[ext_resource type="Texture2D" uid="uid://enk7r6a7eqfa" path="res://botones/botonCuadradoPresionado.png" id="2_nmv24"]
 
 [node name="1" type="TextureButton"]
 offset_right = 40.0
 offset_bottom = 40.0
-texture_normal = ExtResource("1_7d2a5")
-texture_pressed = ExtResource("2_4ajis")
-texture_disabled = ExtResource("1_7d2a5")
+texture_normal = ExtResource("1_qwvec")
+texture_pressed = ExtResource("2_nmv24")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

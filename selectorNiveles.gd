@@ -6,14 +6,15 @@ func _ready():
 	for botones in $GridContainer.get_children():
 		if contador < Simpleton.nvl_actual:
 			contador += 1
-			botones.connect("pressed", self.cargar_nvl)
 			botones.get_node("Label").text = botones.name
 			botones.get_node("Label").modulate = "000000"
 		else:
 			botones.self_modulate = "000000"
 
 
+func _on_regresar_pressed():
+	get_tree().change_scene_to_file("res://menu_inicial.tscn")
 
-func cargar_nvl(nombre):
-	get_tree().change_scene("res://menu_inicial.tscn") 
 
+func _on__pressed():
+	get_tree().change_scene_to_file("res://tarjetasBichos/fichaBicho1.tscn")

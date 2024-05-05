@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5l17aghc0qbc"]
+[gd_scene load_steps=7 format=3 uid="uid://c5l17aghc0qbc"]
 
 [ext_resource type="PackedScene" uid="uid://dgwmdpa2phecu" path="res://botonNiveles.tscn" id="1_6bkam"]
 [ext_resource type="Script" path="res://selectorNiveles.gd" id="1_r2hxn"]
+[ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="3_87h36"]
+[ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="4_305mr"]
+[ext_resource type="Texture2D" uid="uid://bwhaqrnagr87i" path="res://iconos/home.png" id="5_5lt85"]
+[ext_resource type="Texture2D" uid="uid://cujo1s1238teh" path="res://backgrounds/propuestaBackground2.jpeg" id="6_p7lck"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -51,5 +55,40 @@ layout_mode = 2
 [node name="8" parent="GridContainer" instance=ExtResource("1_6bkam")]
 layout_mode = 2
 
-[node name="9" parent="GridContainer" instance=ExtResource("1_6bkam")]
-layout_mode = 2
+[node name="regresar" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 26.0
+offset_right = 112.0
+offset_bottom = 102.0
+texture_normal = ExtResource("3_87h36")
+texture_pressed = ExtResource("4_305mr")
+
+[node name="TextureRect" type="TextureRect" parent="regresar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_5lt85")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(579, 322)
+scale = Vector2(0.598958, 0.603704)
+texture = ExtResource("6_p7lck")
+
+[connection signal="pressed" from="GridContainer/1" to="." method="_on__pressed"]
+[connection signal="pressed" from="GridContainer/2" to="." method="_on__pressed"]
+[connection signal="pressed" from="GridContainer/3" to="." method="_on__pressed"]
+[connection signal="pressed" from="GridContainer/4" to="." method="_on__pressed"]
+[connection signal="pressed" from="GridContainer/5" to="." method="_on__pressed"]
+[connection signal="pressed" from="GridContainer/6" to="." method="_on__pressed"]
+[connection signal="pressed" from="GridContainer/7" to="." method="_on__pressed"]
+[connection signal="pressed" from="GridContainer/8" to="." method="_on__pressed"]
+[connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]

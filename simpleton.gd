@@ -1,6 +1,6 @@
 extends Node
 
-var nvl_actual:int = 3
+var nvl_actual:int = 1
 var nvls:Array = []
 
 var test_dic = {}
