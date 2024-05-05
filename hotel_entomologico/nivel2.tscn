@@ -1,12 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddcu8e0p6oktb"]
+[gd_scene load_steps=14 format=3 uid="uid://cm1ldep7hex8i"]
 
-[ext_resource type="Script" path="res://hotel_entomologico/nivel.gd" id="1_525b6"]
-[ext_resource type="Texture2D" uid="uid://djssti5jynahx" path="res://16x16 TopDown Nature/4_Seasons_Ground_Tiles.png" id="1_bhxd7"]
-[ext_resource type="Texture2D" uid="uid://cujo1s1238teh" path="res://backgrounds/propuestaBackground2.jpeg" id="2_xkkh0"]
-[ext_resource type="AudioStream" uid="uid://dv13bqp2apq27" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Open - 1.mp3" id="4_a00ml"]
-[ext_resource type="AudioStream" uid="uid://c6kyvuje5xp2v" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Close - 1.mp3" id="5_yxkd1"]
-[ext_resource type="Texture2D" uid="uid://c814phfmqckx0" path="res://hotel_entomologico/imagenes_hotel/casa_madera.png" id="6_01nar"]
-[ext_resource type="PackedScene" uid="uid://bkhexfb8ykxgu" path="res://escenas_bichos/chapulin.tscn" id="7_ra2to"]
+[ext_resource type="Script" path="res://hotel_entomologico/nivel.gd" id="1_pqn34"]
+[ext_resource type="Texture2D" uid="uid://djssti5jynahx" path="res://16x16 TopDown Nature/4_Seasons_Ground_Tiles.png" id="2_o6o36"]
+[ext_resource type="Texture2D" uid="uid://cujo1s1238teh" path="res://backgrounds/propuestaBackground2.jpeg" id="3_syx6v"]
+[ext_resource type="AudioStream" uid="uid://dv13bqp2apq27" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Open - 1.mp3" id="4_15qni"]
+[ext_resource type="AudioStream" uid="uid://c6kyvuje5xp2v" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Close - 1.mp3" id="5_0ugc8"]
+[ext_resource type="Texture2D" uid="uid://c814phfmqckx0" path="res://hotel_entomologico/imagenes_hotel/casa_madera.png" id="6_donp0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt0ue"]
 size = Vector2(175.125, 143.5)
@@ -24,7 +23,7 @@ size = Vector2(320, 111.75)
 size = Vector2(128, 96)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpjwl"]
-texture = ExtResource("1_bhxd7")
+texture = ExtResource("2_o6o36")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -114,7 +113,7 @@ texture = ExtResource("1_bhxd7")
 sources/0 = SubResource("TileSetAtlasSource_qpjwl")
 
 [node name="Nivel" type="Node2D"]
-script = ExtResource("1_525b6")
+script = ExtResource("1_pqn34")
 
 [node name="area_grillo" type="Area2D" parent="."]
 position = Vector2(648, 453)
@@ -160,41 +159,20 @@ layer_0/tile_data = PackedInt32Array(131151, 0, 4, 196687, 0, 4, 262223, 0, 4, 3
 z_index = -1
 position = Vector2(576.5, 326.875)
 scale = Vector2(0.601563, 0.602083)
-texture = ExtResource("2_xkkh0")
+texture = ExtResource("3_syx6v")
 
 [node name="correcto" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_a00ml")
+stream = ExtResource("4_15qni")
 pitch_scale = 1.5
 
 [node name="incorrecto" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_yxkd1")
+stream = ExtResource("5_0ugc8")
 pitch_scale = 1.5
 
 [node name="CasaMadera" type="Sprite2D" parent="."]
 position = Vector2(593, 241)
 scale = Vector2(1.689, 1.458)
-texture = ExtResource("6_01nar")
-
-[node name="Chapulin" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(558, 625)
-
-[node name="Chapulin2" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(879, 64)
-
-[node name="Chapulin3" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(306, 574)
-
-[node name="Chapulin4" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(109, 625)
-
-[node name="Chapulin5" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(51, 147)
-
-[node name="Chapulin6" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(243, 80)
-
-[node name="Chapulin7" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(59, 42)
+texture = ExtResource("6_donp0")
 
 [connection signal="area_shape_entered" from="area_grillo" to="." method="_on_area_grillo_area_shape_entered"]
 [connection signal="area_shape_exited" from="area_grillo" to="." method="_on_area_grillo_area_shape_exited"]

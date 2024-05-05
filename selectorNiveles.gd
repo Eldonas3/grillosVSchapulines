@@ -17,4 +17,4 @@ func _on_regresar_pressed():
 
 
 func _on__pressed():
-	get_tree().change_scene_to_file("res://tarjetasBichos/fichaBicho1.tscn")
+	get_tree().change_scene_to_file("res://hotel_entomologico/nivel.tscn")
