@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://comparador.gd" id="1_b4aib"]
 [ext_resource type="Texture2D" uid="uid://djssti5jynahx" path="res://16x16 TopDown Nature/4_Seasons_Ground_Tiles.png" id="2_sy5v4"]
-[ext_resource type="AudioStream" uid="uid://dv13bqp2apq27" path="res://Imagenes inovatec/JDSherbert - Ultimate UI SFX Pack - Popup Open - 1.mp3" id="3_fd3eo"]
-[ext_resource type="AudioStream" uid="uid://c6kyvuje5xp2v" path="res://Imagenes inovatec/JDSherbert - Ultimate UI SFX Pack - Popup Close - 1.mp3" id="4_rglkw"]
+[ext_resource type="AudioStream" uid="uid://dv13bqp2apq27" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Open - 1.mp3" id="3_fd3eo"]
+[ext_resource type="AudioStream" uid="uid://c6kyvuje5xp2v" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Close - 1.mp3" id="4_rglkw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxm12"]
 size = Vector2(197, 167)
@@ -150,7 +150,7 @@ pitch_scale = 1.5
 [connection signal="area_shape_entered" from="area_chapulines" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="area_shape_entered" from="area_hormigas" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="area_shape_entered" from="area_hormigas" to="." method="_on_area_hormigas_area_shape_entered"]
-[connection signal="area_shape_entered" from="area_chinches" to="." method="_on_area_chinches_area_shape_entered"]
 [connection signal="area_shape_entered" from="area_chinches" to="." method="_on_area_2d_area_shape_entered"]
-[connection signal="area_shape_entered" from="area_grillos" to="." method="_on_area_grillos_area_shape_entered"]
+[connection signal="area_shape_entered" from="area_chinches" to="." method="_on_area_chinches_area_shape_entered"]
 [connection signal="area_shape_entered" from="area_grillos" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="area_shape_entered" from="area_grillos" to="." method="_on_area_grillos_area_shape_entered"]
