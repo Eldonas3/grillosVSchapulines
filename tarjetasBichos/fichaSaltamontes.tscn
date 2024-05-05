@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://di1as47dqw8m1"]
+
+[ext_resource type="Texture2D" uid="uid://btpen28g6vcj4" path="res://Imagenes inovatec/saltamontes.jpg" id="1_4afcy"]
+[ext_resource type="Texture2D" uid="uid://d0gci4nch40pn" path="res://tarjetasBichos/FichaBicho.png" id="2_bses2"]
+[ext_resource type="Texture2D" uid="uid://dtpdi4hhxy0v4" path="res://tarjetasBichos/iconos/omnivoro.png" id="3_187uv"]
+
+[node name="fichaSaltamontes" type="Node2D"]
+
+[node name="bicho" type="Sprite2D" parent="."]
+position = Vector2(578.512, 178.708)
+scale = Vector2(0.563719, 0.461167)
+texture = ExtResource("1_4afcy")
+
+[node name="tarjeta" type="Sprite2D" parent="."]
+position = Vector2(584.653, 325.039)
+scale = Vector2(1.51985, 1.37196)
+texture = ExtResource("2_bses2")
+
+[node name="nombreComun" type="Label" parent="."]
+offset_left = 365.653
+offset_top = 27.039
+offset_right = 508.653
+offset_bottom = 55.039
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "SALTAMONTES"
+
+[node name="nombreCientifico" type="Label" parent="."]
+offset_left = 365.653
+offset_top = 298.039
+offset_right = 574.653
+offset_bottom = 326.039
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "ACHETA DOMESTICUS"
+
+[node name="tamanio" type="Label" parent="."]
+offset_left = 390.653
+offset_top = 567.039
+offset_right = 515.653
+offset_bottom = 595.039
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "25-30 mm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cuerpo" type="Label" parent="."]
+offset_left = 377.653
+offset_top = 377.039
+offset_right = 815.653
+offset_bottom = 467.039
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Cuerpo esbelto cilíndrico, con 3 patas articuladas y antenas que pueden ser más largas que su cuerpo."
+autowrap_mode = 2
+
+[node name="color" type="Label" parent="."]
+offset_left = 382.653
+offset_top = 474.039
+offset_right = 672.653
+offset_bottom = 549.039
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Café a negro/marrón amarillento con franjas oscuras en la cabeza y abdomen."
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(754, 71)
+scale = Vector2(0.416424, 0.409223)
+texture = ExtResource("3_187uv")
