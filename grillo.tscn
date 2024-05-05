@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://rbhlrh0leuau"]
+
+[ext_resource type="Script" path="res://grillo.gd" id="1_pko7c"]
+[ext_resource type="Texture2D" uid="uid://dp8akptkcy0cf" path="res://grilloalarigida.jpg" id="2_5uvel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8gdp"]
+size = Vector2(77, 52)
+
+[node name="grillo" type="Node2D"]
+position = Vector2(60, 46)
+script = ExtResource("1_pko7c")
+
+[node name="grillito" type="Sprite2D" parent="."]
+position = Vector2(5.25, 2.5)
+scale = Vector2(0.1275, 0.119159)
+texture = ExtResource("2_5uvel")
+
+[node name="area" type="Area2D" parent="." groups=["grillos"]]
+
+[node name="area_click" type="CollisionShape2D" parent="area"]
+position = Vector2(5, 3.00001)
+shape = SubResource("RectangleShape2D_f8gdp")
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

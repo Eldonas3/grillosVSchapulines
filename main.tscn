@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgpy0ljq33pcm"]
+
+[ext_resource type="PackedScene" uid="uid://rbhlrh0leuau" path="res://grillo.tscn" id="1_ahu6k"]
+[ext_resource type="PackedScene" uid="uid://d13j6g2i866kh" path="res://chinche.tscn" id="2_vlha4"]
+[ext_resource type="PackedScene" uid="uid://bridq4lsf88sn" path="res://comparador.tscn" id="3_ctowk"]
+[ext_resource type="PackedScene" uid="uid://c07vlf8xosruo" path="res://comparador_grillo.tscn" id="4_0kv6m"]
+
+[node name="main" type="Node2D"]
+
+[node name="grillo" parent="." instance=ExtResource("1_ahu6k")]
+position = Vector2(158, 38)
+
+[node name="chinche" parent="." instance=ExtResource("2_vlha4")]
+position = Vector2(255, 37)
+
+[node name="area chinche" parent="." instance=ExtResource("3_ctowk")]
+z_index = -1
+position = Vector2(174, 238)
+
+[node name="comparador_grillo" parent="." instance=ExtResource("4_0kv6m")]
+z_index = -1
+position = Vector2(375, 227)

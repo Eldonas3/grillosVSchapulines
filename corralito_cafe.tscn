@@ -1,0 +1,115 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhl2elaoyimhv"]
+
+[ext_resource type="Texture2D" uid="uid://djssti5jynahx" path="res://16x16 TopDown Nature/4_Seasons_Ground_Tiles.png" id="1_laaco"]
+[ext_resource type="Script" path="res://corralito_cafe.gd" id="1_wts0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys1t1"]
+size = Vector2(139, 94)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6dw7f"]
+texture = ExtResource("1_laaco")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_24rbd"]
+sources/0 = SubResource("TileSetAtlasSource_6dw7f")
+
+[node name="corralito_cafe" type="Node2D"]
+position = Vector2(177, 96)
+script = ExtResource("1_wts0i")
+
+[node name="area_corralito_cafe" type="Area2D" parent="."]
+
+[node name="colision_corralito" type="CollisionShape2D" parent="area_corralito_cafe"]
+position = Vector2(3.5, 5)
+shape = SubResource("RectangleShape2D_ys1t1")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(157, 181)
+tile_set = SubResource("TileSet_24rbd")
+format = 2
+layer_0/tile_data = PackedInt32Array(-851982, 0, 6, -786446, 0, 7, -720910, 0, 7, -655374, 0, 7, -589838, 0, 7, -524302, 0, 8, -524301, 65536, 8, -524300, 65536, 8, -524299, 65536, 8, -524298, 65536, 8, -524297, 65536, 8, -524296, 65536, 8, -524295, 65536, 8, -524294, 131072, 8, -589830, 131072, 7, -655366, 131072, 7, -720902, 131072, 7, -786438, 131072, 7, -851974, 131072, 6, -851975, 393216, 8, -851976, 65536, 6, -851977, 65536, 6, -851978, 65536, 6, -851979, 65536, 6, -851980, 65536, 6, -851981, 65536, 6, -786445, 393216, 7, -589832, 393216, 7, -655370, 393216, 7, -786444, 196608, 7, -720908, 327680, 6, -720909, 196608, 7, -655373, 327680, 8, -589836, 327680, 6, -589835, 327680, 8, -589834, 196608, 7, -589833, 196608, 7, -655369, 196608, 7, -720905, 196608, 7, -786441, 327680, 6, -786442, 327680, 7, -786443, 196608, 7, -720907, 327680, 6, -720906, 327680, 8, -655371, 196608, 7, -655372, 196608, 7, -589837, 327680, 6, -786440, 196608, 7, -786439, 196608, 7, -720903, 196608, 7, -655367, 327680, 6, -589831, 327680, 8, -655368, 196608, 7, -720904, 196608, 7)
+
+[connection signal="area_shape_entered" from="area_corralito_cafe" to="." method="_on_area_corralito_cafe_area_shape_entered"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://klhisq2y88rr"]
+
+[ext_resource type="Script" path="res://hormiga.gd" id="1_hs6vm"]
+[ext_resource type="Texture2D" uid="uid://c1i1hs41grecy" path="res://Imagenes inovatec/hormigatortuga - copia.jpg" id="1_so7sp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wy6ba"]
+size = Vector2(111.5, 75.5)
+
+[node name="hormiga" type="Node2D"]
+script = ExtResource("1_hs6vm")
+
+[node name="areahormiga" type="Area2D" parent="."]
+position = Vector2(86.75, 76.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areahormiga"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_wy6ba")
+
+[node name="Hormigatortuga-Copia" type="Sprite2D" parent="." groups=["hormigas"]]
+position = Vector2(85.75, 75.25)
+scale = Vector2(0.139375, 0.148113)
+texture = ExtResource("1_so7sp")
+
+[connection signal="input_event" from="areahormiga" to="." method="_on_areahormiga_input_event"]

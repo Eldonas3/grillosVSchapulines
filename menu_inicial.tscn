@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://deerec2lnou8p"]
+
+[ext_resource type="Texture2D" uid="uid://dt6rgxr6cdq85" path="res://grassAndFlowerTiles_S.png" id="1_p1r0p"]
+[ext_resource type="Texture2D" uid="uid://bdsr0i2o6cprw" path="res://Imagenes inovatec/chapulinareana-removebg-preview.png" id="2_a3s0o"]
+[ext_resource type="Texture2D" uid="uid://n6040o8kwmhr" path="res://Imagenes inovatec/chapulinoscuro-removebg-preview.png" id="3_vgfmw"]
+
+[node name="menu_inicial" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(188, 125)
+scale = Vector2(3.88542, 3.14557)
+texture = ExtResource("1_p1r0p")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 344.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 30
+text = "Grillos VS Chapulines"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 112.0
+offset_top = 136.0
+offset_right = 264.0
+offset_bottom = 167.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Jugar
+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+offset_left = 112.0
+offset_top = 185.0
+offset_right = 264.0
+offset_bottom = 216.0
+
+[node name="Button" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Salir
+"
+
+[node name="Chapulinareana-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(312, 184)
+scale = Vector2(0.121212, 0.133333)
+texture = ExtResource("2_a3s0o")
+
+[node name="Chapulinoscuro-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(64, 192)
+scale = Vector2(0.138889, 0.142157)
+texture = ExtResource("3_vgfmw")
