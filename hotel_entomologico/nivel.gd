@@ -1,5 +1,7 @@
 extends Node2D
 
+var counter_chapulin = 0
+
 func _ready():
 	set_process(true)
 
@@ -27,8 +29,10 @@ func _on_area_hormiga_chicatana_area_shape_entered(area_rid, area, area_shape_in
 func _on_area_chapulin_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	if area.is_in_group("chapulines"):
 		$correcto.playing = true
-		# Desactiva el proceso del área para detener el movimiento del personaje
-		#area.set_process(false)		
+		if counter_chapulin < 7:
+			counter_chapulin += 1
+		elif counter_chapulin >= 7:
+			get_tree().change_scene_to_file("res://selectorNiveles.tscn")
 	else:
 		$incorrecto.playing = true
 

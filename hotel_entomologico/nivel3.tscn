@@ -11,19 +11,19 @@
 [ext_resource type="PackedScene" uid="uid://bor44n3vfuh7b" path="res://escenas_bichos/jumil.tscn" id="9_qfpsu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt0ue"]
-size = Vector2(143, 110)
+size = Vector2(112, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ongb"]
-size = Vector2(109, 113)
+size = Vector2(75, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj85j"]
-size = Vector2(162, 63)
+size = Vector2(122, 58)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cy76i"]
-size = Vector2(284, 81)
+size = Vector2(217, 69)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eud3j"]
-size = Vector2(95, 63)
+size = Vector2(73, 52)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpjwl"]
 texture = ExtResource("2_onqjx")
@@ -122,35 +122,35 @@ script = ExtResource("1_imral")
 position = Vector2(648, 453)
 
 [node name="colision_grillo" type="CollisionShape2D" parent="area_grillo"]
-position = Vector2(0.5, -13)
+position = Vector2(2, -16.5)
 shape = SubResource("RectangleShape2D_vt0ue")
 
 [node name="area_hormiga_chicatana" type="Area2D" parent="." groups=["hormigas"]]
 position = Vector2(495, 454)
 
 [node name="colision_hormiga_chicatana" type="CollisionShape2D" parent="area_hormiga_chicatana"]
-position = Vector2(-6.5, -13.5)
+position = Vector2(-5.5, -17.5)
 shape = SubResource("RectangleShape2D_6ongb")
 
 [node name="area_chapulin" type="Area2D" parent="." groups=["chapulines"]]
 position = Vector2(645, 210)
 
 [node name="colision_chapulin" type="CollisionShape2D" parent="area_chapulin" groups=["chapulines"]]
-position = Vector2(-5, -4.5)
+position = Vector2(-12, -1)
 shape = SubResource("RectangleShape2D_rj85j")
 
 [node name="area_jumil" type="Area2D" parent="." groups=["jumiles"]]
 position = Vector2(575, 312)
 
 [node name="colision_jumil" type="CollisionShape2D" parent="area_jumil" groups=["jumiles"]]
-position = Vector2(-2, -1.5)
+position = Vector2(-4.5, 1.5)
 shape = SubResource("RectangleShape2D_cy76i")
 
 [node name="area_escarabajo" type="Area2D" parent="." groups=["escarabajos"]]
 position = Vector2(486, 211)
 
 [node name="colision_escarabajo" type="CollisionShape2D" parent="area_escarabajo"]
-position = Vector2(-7.5, -4.5)
+position = Vector2(-7.5, 0)
 shape = SubResource("RectangleShape2D_eud3j")
 
 [node name="TileMap" type="TileMap" parent="."]

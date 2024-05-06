@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://0xt2cmkl8edg"]
+
+[ext_resource type="Script" path="res://you_win.gd" id="1_pq8mf"]
+[ext_resource type="Texture2D" uid="uid://b3p0of3faoypy" path="res://backgrounds/propuestaBackground.jpeg" id="2_wdwta"]
+
+[node name="you_win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pq8mf")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.508
+anchor_right = 0.5
+anchor_bottom = 0.508
+offset_left = -107.0
+offset_top = -41.184
+offset_right = 89.0
+offset_bottom = 77.816
+
+[node name="PropuestaBackground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(563, 308)
+scale = Vector2(0.172656, 0.212731)
+texture = ExtResource("2_wdwta")
