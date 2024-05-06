@@ -1,5 +1,7 @@
 extends Node2D
 
+var counter_chapulin = 1
+
 var is_inside = false
 var speed = 100  # Velocidad de movimiento en píxeles por segundo
 var direction = 1  # Dirección del movimiento: 1 para derecha, -1 para izquierda
