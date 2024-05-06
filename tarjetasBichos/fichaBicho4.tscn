@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbiadfgmq7152"]
+[gd_scene load_steps=10 format=3 uid="uid://ceguns2y4oyu8"]
 
 [ext_resource type="Script" path="res://tarjetasBichos/fichaBicho1.gd" id="1_2bxdj"]
-[ext_resource type="Texture2D" uid="uid://cvgqi30cevxyr" path="res://imagenesInsectos/hormigafuegoeuropea.jpg" id="2_x6gkh"]
+[ext_resource type="Texture2D" uid="uid://cywaiwtmo3ays" path="res://imagenesInsectos/escarabajo.jpg" id="2_4hlau"]
 [ext_resource type="Texture2D" uid="uid://d0gci4nch40pn" path="res://tarjetasBichos/FichaBase.png" id="3_ru5jb"]
 [ext_resource type="FontFile" uid="uid://8a6i4hqyn1ap" path="res://tipografia/Deep Hero.ttf" id="4_4ab7m"]
-[ext_resource type="Texture2D" uid="uid://84cpui3hg5n3" path="res://iconos/hongo.png" id="5_uj37f"]
+[ext_resource type="Texture2D" uid="uid://dtpdi4hhxy0v4" path="res://iconos/omnivoro.png" id="5_iwk71"]
 [ext_resource type="Texture2D" uid="uid://duacvnl3edgud" path="res://backgrounds/propuestaBackgroundLibreria.png" id="5_vtane"]
 [ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="6_jin5q"]
 [ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="7_y44od"]
@@ -14,9 +14,9 @@
 script = ExtResource("1_2bxdj")
 
 [node name="bicho" type="Sprite2D" parent="."]
-position = Vector2(571.5, 173.98)
-scale = Vector2(0.632468, 0.576839)
-texture = ExtResource("2_x6gkh")
+position = Vector2(566.302, 188.5)
+scale = Vector2(0.650134, 0.574419)
+texture = ExtResource("2_4hlau")
 
 [node name="tarjeta" type="Sprite2D" parent="."]
 position = Vector2(584.653, 325.039)
@@ -31,7 +31,7 @@ offset_bottom = 67.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_4ab7m")
 theme_override_font_sizes/font_size = 36
-text = "HORMIGA"
+text = "ESCARABAJO"
 
 [node name="nombreCientifico" type="Label" parent="."]
 offset_left = 365.653
@@ -41,7 +41,7 @@ offset_bottom = 326.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_4ab7m")
 theme_override_font_sizes/font_size = 20
-text = "ATTA MEXICANA"
+text = "PHYLLOPHAGA"
 
 [node name="tamanio" type="Label" parent="."]
 offset_left = 390.653
@@ -51,7 +51,7 @@ offset_bottom = 595.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_4ab7m")
 theme_override_font_sizes/font_size = 22
-text = "1.8 - 3 cm"
+text = "1 - 5 cm"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -62,7 +62,7 @@ offset_right = 791.0
 offset_bottom = 467.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Son pequeños y alargados, aunque su cola es muy grande. Algunas tienen alas"
+text = "Regordete y duro por su armadura. Tiene patas con \"espinas\", un par de alas y a veces tienen cuernos"
 autowrap_mode = 2
 
 [node name="color" type="Label" parent="."]
@@ -72,18 +72,18 @@ offset_right = 672.653
 offset_bottom = 549.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Son marrones oscuro y rojo, con algunos toques negros"
+text = "Son negros o marrones, pero pueden tener marcas de colores brillantes o metálicos"
 autowrap_mode = 2
 
 [node name="icono" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(754, 71)
 scale = Vector2(0.416424, 0.409223)
-texture = ExtResource("5_uj37f")
+texture = ExtResource("5_iwk71")
 
 [node name="fondo" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(580, 322)
+position = Vector2(580, 326)
 scale = Vector2(1.86102, 2.576)
 texture = ExtResource("5_vtane")
 
@@ -135,4 +135,4 @@ texture = ExtResource("8_6huf2")
 flip_h = true
 
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
-[connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed" binds= ["4"]]
+[connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed" binds= ["5"]]
