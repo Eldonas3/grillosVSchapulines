@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://intro.gd" id="1_86v2o"]
 [ext_resource type="Texture2D" uid="uid://lg6lo2orqp3q" path="res://logoEmpresa.png" id="1_br5e3"]
-[ext_resource type="AudioStream" path="res://sonidoIntro.mp3" id="3_rl6i0"]
+[ext_resource type="AudioStream" uid="uid://n76chey3gdvm" path="res://sonidos/sonidoIntro.mp3" id="3_rl6i0"]
 [ext_resource type="Script" path="res://reproducirIntro.gd" id="4_64swy"]
 
 [sub_resource type="Animation" id="Animation_2j65c"]
