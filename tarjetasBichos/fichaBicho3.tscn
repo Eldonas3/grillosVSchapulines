@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cyjbgw8blmssi" path="res://imagenesInsectos/jumil.jpg" id="2_7aomf"]
 [ext_resource type="Texture2D" uid="uid://d0gci4nch40pn" path="res://tarjetasBichos/FichaBase.png" id="3_270th"]
 [ext_resource type="FontFile" uid="uid://8a6i4hqyn1ap" path="res://tipografia/Deep Hero.ttf" id="4_br4eo"]
-[ext_resource type="Texture2D" uid="uid://dd7u3gjrtm0y2" path="res://iconos/herbivoro.png" id="4_y02b7"]
 [ext_resource type="Texture2D" uid="uid://duacvnl3edgud" path="res://backgrounds/propuestaBackgroundLibreria.png" id="5_7vppm"]
+[ext_resource type="Texture2D" uid="uid://ecywh63jmrq4" path="res://iconos/sangre.png" id="5_s0s4o"]
 [ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="6_wl7ew"]
 [ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="7_o2hbw"]
 [ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="8_q11tp"]
@@ -79,7 +79,7 @@ autowrap_mode = 2
 z_index = 1
 position = Vector2(754, 71)
 scale = Vector2(0.416424, 0.409223)
-texture = ExtResource("4_y02b7")
+texture = ExtResource("5_s0s4o")
 
 [node name="fondo" type="Sprite2D" parent="."]
 z_index = -1
