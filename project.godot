@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="bichos_dragndrop"
-run/main_scene="res://menu_inicial.tscn"
+run/main_scene="res://intro.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Simpleton="*res://simpleton.gd"
+SonidoFondo="*res://sonido_fondo.tscn"
 
 [input]
 
