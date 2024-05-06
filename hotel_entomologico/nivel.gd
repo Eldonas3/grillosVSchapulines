@@ -10,7 +10,7 @@ func _on_area_grillo_area_shape_entered(area_rid, area, area_shape_index, local_
 	if area.is_in_group("grillos"):
 		$correcto.playing = true
 		# Desactiva el proceso del área para detener el movimiento del personaje
-		#area.set_process(false)
+		area.set_process(false)
 		#area.is_moving = false
 	else:
 		$incorrecto.playing = true

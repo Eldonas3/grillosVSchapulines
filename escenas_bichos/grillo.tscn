@@ -10,7 +10,7 @@ radius = 23.0
 position = Vector2(98, 66)
 script = ExtResource("1_lykxf")
 
-[node name="Area2D" type="Area2D" parent="." groups=["grillos"]]
+[node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_8g1wf")
@@ -20,4 +20,5 @@ position = Vector2(-1.52588e-05, 1)
 scale = Vector2(0.0827703, 0.109005)
 texture = ExtResource("2_aib3k")
 
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

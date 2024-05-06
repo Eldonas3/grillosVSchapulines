@@ -1,30 +1,34 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddcu8e0p6oktb"]
+[gd_scene load_steps=19 format=3 uid="uid://ct7a22xvlf2fd"]
 
-[ext_resource type="Script" path="res://hotel_entomologico/nivel.gd" id="1_525b6"]
-[ext_resource type="Texture2D" uid="uid://djssti5jynahx" path="res://16x16 TopDown Nature/4_Seasons_Ground_Tiles.png" id="1_bhxd7"]
-[ext_resource type="Texture2D" uid="uid://cujo1s1238teh" path="res://backgrounds/propuestaBackground2.jpeg" id="2_xkkh0"]
-[ext_resource type="AudioStream" uid="uid://dv13bqp2apq27" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Open - 1.mp3" id="4_a00ml"]
-[ext_resource type="AudioStream" uid="uid://c6kyvuje5xp2v" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Close - 1.mp3" id="5_yxkd1"]
-[ext_resource type="Texture2D" uid="uid://c814phfmqckx0" path="res://hotel_entomologico/imagenes_hotel/casa_madera.png" id="6_01nar"]
-[ext_resource type="PackedScene" uid="uid://bkhexfb8ykxgu" path="res://escenas_bichos/chapulin.tscn" id="7_ra2to"]
+[ext_resource type="Script" path="res://hotel_entomologico/nivel.gd" id="1_irad6"]
+[ext_resource type="Texture2D" uid="uid://djssti5jynahx" path="res://16x16 TopDown Nature/4_Seasons_Ground_Tiles.png" id="2_gagqn"]
+[ext_resource type="Texture2D" uid="uid://cujo1s1238teh" path="res://backgrounds/propuestaBackground2.jpeg" id="3_87gke"]
+[ext_resource type="AudioStream" uid="uid://dv13bqp2apq27" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Open - 1.mp3" id="4_ag6r7"]
+[ext_resource type="AudioStream" uid="uid://c6kyvuje5xp2v" path="res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Close - 1.mp3" id="5_2wyom"]
+[ext_resource type="Texture2D" uid="uid://c814phfmqckx0" path="res://hotel_entomologico/imagenes_hotel/casa_madera.png" id="6_36uhi"]
+[ext_resource type="PackedScene" uid="uid://bkhexfb8ykxgu" path="res://escenas_bichos/chapulin.tscn" id="7_7idjk"]
+[ext_resource type="PackedScene" uid="uid://d5n8jdvdclen" path="res://escenas_bichos/grillo.tscn" id="8_cctcd"]
+[ext_resource type="PackedScene" uid="uid://bor44n3vfuh7b" path="res://escenas_bichos/jumil.tscn" id="9_u8knt"]
+[ext_resource type="PackedScene" uid="uid://dpjfj3ldks57x" path="res://escenas_bichos/hormiga_chicatana.tscn" id="10_46fcl"]
+[ext_resource type="PackedScene" uid="uid://fl2dngd176ds" path="res://escenas_bichos/escarabajo.tscn" id="11_h02er"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt0ue"]
-size = Vector2(142, 112)
+size = Vector2(143, 110)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ongb"]
-size = Vector2(111, 114)
+size = Vector2(109, 113)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj85j"]
-size = Vector2(161, 71)
+size = Vector2(162, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cy76i"]
-size = Vector2(280, 77)
+size = Vector2(284, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eud3j"]
-size = Vector2(97, 68)
+size = Vector2(95, 63)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpjwl"]
-texture = ExtResource("1_bhxd7")
+texture = ExtResource("2_gagqn")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -114,41 +118,41 @@ texture = ExtResource("1_bhxd7")
 sources/0 = SubResource("TileSetAtlasSource_qpjwl")
 
 [node name="Nivel" type="Node2D"]
-script = ExtResource("1_525b6")
+script = ExtResource("1_irad6")
 
-[node name="area_grillo" type="Area2D" parent="."]
+[node name="area_grillo" type="Area2D" parent="." groups=["grillos"]]
 position = Vector2(648, 453)
 
 [node name="colision_grillo" type="CollisionShape2D" parent="area_grillo"]
-position = Vector2(-1, -16)
+position = Vector2(0.5, -13)
 shape = SubResource("RectangleShape2D_vt0ue")
 
-[node name="area_hormiga_chicatana" type="Area2D" parent="."]
+[node name="area_hormiga_chicatana" type="Area2D" parent="." groups=["hormigas"]]
 position = Vector2(495, 454)
 
 [node name="colision_hormiga_chicatana" type="CollisionShape2D" parent="area_hormiga_chicatana"]
-position = Vector2(-7.5, -13)
+position = Vector2(-6.5, -13.5)
 shape = SubResource("RectangleShape2D_6ongb")
 
 [node name="area_chapulin" type="Area2D" parent="." groups=["chapulines"]]
 position = Vector2(645, 210)
 
-[node name="colision_chapulin" type="CollisionShape2D" parent="area_chapulin"]
-position = Vector2(-5.5, -3.5)
+[node name="colision_chapulin" type="CollisionShape2D" parent="area_chapulin" groups=["chapulines"]]
+position = Vector2(-5, -4.5)
 shape = SubResource("RectangleShape2D_rj85j")
 
-[node name="area_jumil" type="Area2D" parent="."]
+[node name="area_jumil" type="Area2D" parent="." groups=["jumiles"]]
 position = Vector2(575, 312)
 
-[node name="colision_jumil" type="CollisionShape2D" parent="area_jumil"]
-position = Vector2(-3, -1.5)
+[node name="colision_jumil" type="CollisionShape2D" parent="area_jumil" groups=["jumiles"]]
+position = Vector2(-2, -1.5)
 shape = SubResource("RectangleShape2D_cy76i")
 
-[node name="area_escarabajo" type="Area2D" parent="."]
+[node name="area_escarabajo" type="Area2D" parent="." groups=["escarabajos"]]
 position = Vector2(486, 211)
 
-[node name="colision_escarabajo" type="CollisionShape2D" parent="area_escarabajo"]
-position = Vector2(-5.5, -3)
+[node name="colision_escarabajo" type="CollisionShape2D" parent="area_escarabajo" groups=["escarabajos"]]
+position = Vector2(-7.5, -4.5)
 shape = SubResource("RectangleShape2D_eud3j")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -160,41 +164,65 @@ layer_0/tile_data = PackedInt32Array(131151, 0, 4, 196687, 0, 4, 262223, 0, 4, 3
 z_index = -1
 position = Vector2(576.5, 326.875)
 scale = Vector2(0.601563, 0.602083)
-texture = ExtResource("2_xkkh0")
+texture = ExtResource("3_87gke")
 
 [node name="correcto" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_a00ml")
+stream = ExtResource("4_ag6r7")
 pitch_scale = 1.5
 
 [node name="incorrecto" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_yxkd1")
+stream = ExtResource("5_2wyom")
 pitch_scale = 1.5
 
 [node name="CasaMadera" type="Sprite2D" parent="."]
 position = Vector2(593, 241)
 scale = Vector2(1.689, 1.458)
-texture = ExtResource("6_01nar")
+texture = ExtResource("6_36uhi")
 
-[node name="Chapulin" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(558, 625)
+[node name="Chapulin" parent="." instance=ExtResource("7_7idjk")]
+position = Vector2(957, 79)
 
-[node name="Chapulin2" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(879, 64)
+[node name="Chapulin2" parent="." instance=ExtResource("7_7idjk")]
+position = Vector2(88, 569)
 
-[node name="Chapulin3" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(306, 574)
+[node name="Chapulin3" parent="." instance=ExtResource("7_7idjk")]
+position = Vector2(53, 73)
 
-[node name="Chapulin4" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(109, 625)
+[node name="Grillo" parent="." instance=ExtResource("8_cctcd")]
+position = Vector2(586, 43)
 
-[node name="Chapulin5" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(51, 147)
+[node name="Grillo2" parent="." instance=ExtResource("8_cctcd")]
+position = Vector2(183, 66)
 
-[node name="Chapulin6" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(243, 80)
+[node name="Grillo3" parent="." instance=ExtResource("8_cctcd")]
+position = Vector2(848, 547)
 
-[node name="Chapulin7" parent="." instance=ExtResource("7_ra2to")]
-position = Vector2(59, 42)
+[node name="Jumil2" parent="." instance=ExtResource("9_u8knt")]
+position = Vector2(272, 612)
+
+[node name="Jumil3" parent="." instance=ExtResource("9_u8knt")]
+position = Vector2(517, 95)
+
+[node name="HormigaChicatana" parent="." instance=ExtResource("10_46fcl")]
+position = Vector2(165, 584)
+
+[node name="HormigaChicatana2" parent="." instance=ExtResource("10_46fcl")]
+position = Vector2(320, 578)
+
+[node name="HormigaChicatana3" parent="." instance=ExtResource("10_46fcl")]
+position = Vector2(641, 567)
+
+[node name="Escarabajo" parent="." instance=ExtResource("11_h02er")]
+position = Vector2(119, 81)
+
+[node name="Escarabajo2" parent="." instance=ExtResource("11_h02er")]
+position = Vector2(565, 580)
+
+[node name="Escarabajo3" parent="." instance=ExtResource("11_h02er")]
+position = Vector2(275, 65)
+
+[node name="Escarabajo4" parent="." instance=ExtResource("11_h02er")]
+position = Vector2(435, 582)
 
 [connection signal="area_shape_entered" from="area_grillo" to="." method="_on_area_grillo_area_shape_entered"]
 [connection signal="area_shape_exited" from="area_grillo" to="." method="_on_area_grillo_area_shape_exited"]
