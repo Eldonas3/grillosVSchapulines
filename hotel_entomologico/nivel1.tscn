@@ -130,7 +130,7 @@ position = Vector2(495, 454)
 position = Vector2(-7, -14.25)
 shape = SubResource("RectangleShape2D_6ongb")
 
-[node name="area_chapulin" type="Area2D" parent="."]
+[node name="area_chapulin" type="Area2D" parent="." groups=["chapulines"]]
 position = Vector2(645, 210)
 
 [node name="colision_chapulin" type="CollisionShape2D" parent="area_chapulin"]
