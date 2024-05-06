@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 Simpleton="*res://simpleton.gd"
 SonidoFondo="*res://sonido_fondo.tscn"
+SonidoPresionarBotonMadera="*res://sonido_presionar_boton_madera.tscn"
+Win="*res://win.tscn"
 
 [input]
 

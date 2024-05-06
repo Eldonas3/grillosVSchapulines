@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfa7opbf2e65i"]
+
+[ext_resource type="AudioStream" uid="uid://clua6qsx2mjh5" path="res://sonidos/click-button.mp3" id="1_7wyyu"]
+
+[node name="sonido_presionarBotonMadera" type="AudioStreamPlayer"]
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+stream = ExtResource("1_7wyyu")
+bus = &"Botones"

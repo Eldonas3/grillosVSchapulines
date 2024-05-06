@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b0twhglekoev0"]
+[gd_scene load_steps=20 format=3 uid="uid://b0twhglekoev0"]
 
 [ext_resource type="Script" path="res://hotel_entomologico/nivel.gd" id="1_imral"]
 [ext_resource type="Texture2D" uid="uid://djssti5jynahx" path="res://16x16 TopDown Nature/4_Seasons_Ground_Tiles.png" id="2_onqjx"]
@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://bkhexfb8ykxgu" path="res://escenas_bichos/chapulin.tscn" id="7_omf8t"]
 [ext_resource type="PackedScene" uid="uid://d5n8jdvdclen" path="res://escenas_bichos/grillo.tscn" id="8_v2p3x"]
 [ext_resource type="PackedScene" uid="uid://bor44n3vfuh7b" path="res://escenas_bichos/jumil.tscn" id="9_qfpsu"]
+[ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="10_imomw"]
+[ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="11_aplnf"]
+[ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="12_dtmey"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt0ue"]
 size = Vector2(112, 67)
@@ -212,6 +215,29 @@ position = Vector2(703, 555)
 
 [node name="Jumil6" parent="." instance=ExtResource("9_qfpsu")]
 position = Vector2(703, 555)
+
+[node name="regresar" type="TextureButton" parent="."]
+offset_left = 36.0
+offset_top = 26.0
+offset_right = 112.0
+offset_bottom = 102.0
+texture_normal = ExtResource("10_imomw")
+texture_pressed = ExtResource("11_aplnf")
+
+[node name="TextureRect" type="TextureRect" parent="regresar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -32.0
+offset_right = 26.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_dtmey")
 
 [connection signal="area_shape_entered" from="area_grillo" to="." method="_on_area_grillo_area_shape_entered"]
 [connection signal="area_shape_exited" from="area_grillo" to="." method="_on_area_grillo_area_shape_exited"]

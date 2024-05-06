@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ct7a22xvlf2fd"]
+[gd_scene load_steps=22 format=3 uid="uid://ct7a22xvlf2fd"]
 
 [ext_resource type="Script" path="res://hotel_entomologico/nivel.gd" id="1_irad6"]
 [ext_resource type="Texture2D" uid="uid://djssti5jynahx" path="res://16x16 TopDown Nature/4_Seasons_Ground_Tiles.png" id="2_gagqn"]
@@ -11,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://bor44n3vfuh7b" path="res://escenas_bichos/jumil.tscn" id="9_u8knt"]
 [ext_resource type="PackedScene" uid="uid://dpjfj3ldks57x" path="res://escenas_bichos/hormiga_chicatana.tscn" id="10_46fcl"]
 [ext_resource type="PackedScene" uid="uid://fl2dngd176ds" path="res://escenas_bichos/escarabajo.tscn" id="11_h02er"]
+[ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="12_5d7cq"]
+[ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="13_xn1la"]
+[ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="14_xhpgk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt0ue"]
 size = Vector2(112, 81)
@@ -224,6 +227,29 @@ position = Vector2(275, 65)
 [node name="Escarabajo4" parent="." instance=ExtResource("11_h02er")]
 position = Vector2(435, 582)
 
+[node name="regresar" type="TextureButton" parent="."]
+offset_left = 36.0
+offset_top = 26.0
+offset_right = 112.0
+offset_bottom = 102.0
+texture_normal = ExtResource("12_5d7cq")
+texture_pressed = ExtResource("13_xn1la")
+
+[node name="TextureRect" type="TextureRect" parent="regresar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -32.0
+offset_right = 26.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_xhpgk")
+
 [connection signal="area_shape_entered" from="area_grillo" to="." method="_on_area_grillo_area_shape_entered"]
 [connection signal="area_shape_exited" from="area_grillo" to="." method="_on_area_grillo_area_shape_exited"]
 [connection signal="area_shape_entered" from="area_hormiga_chicatana" to="." method="_on_area_hormiga_chicatana_area_shape_entered"]
@@ -234,3 +260,4 @@ position = Vector2(435, 582)
 [connection signal="area_shape_exited" from="area_jumil" to="." method="_on_area_jumil_area_shape_exited"]
 [connection signal="area_shape_entered" from="area_escarabajo" to="." method="_on_area_escarabajo_area_shape_entered"]
 [connection signal="area_shape_exited" from="area_escarabajo" to="." method="_on_area_escarabajo_area_shape_exited"]
+[connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
