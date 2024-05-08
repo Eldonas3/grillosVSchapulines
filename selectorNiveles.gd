@@ -1,7 +1,12 @@
 extends Control
 var sonidoBoton = preload("res://sonidos/click-button.mp3")
+var sonidoBotonBloquedo = preload("res://sonidos/JDSherbert - Ultimate UI SFX Pack - Popup Close - 1.mp3")
+var regresarB = TextureButton
 
 func _ready():
+	regresarB = $regresar
+	regresarB.tooltip_text = "Ir al inicio"
+	
 	var contador: int = 0
 	
 	for botones in $GridContainer.get_children():
@@ -9,8 +14,10 @@ func _ready():
 			contador += 1
 			botones.get_node("Label").text = botones.name
 			botones.get_node("Label").modulate = "000000"
+			botones.tooltip_text = "Ir al nivel " + str(contador)
 		else:
 			botones.self_modulate = "000000"
+			botones.tooltip_text = "Nivel no desbloqueado"
 
 
 func _on_regresar_pressed():
@@ -21,17 +28,11 @@ func _on_regresar_pressed():
 
 
 func _on__pressed(nombre):
-	SonidoPresionarBotonMadera.stream = sonidoBoton
-	SonidoPresionarBotonMadera.play()
-	get_tree().change_scene_to_file("res://tarjetasBichos/fichaBicho"+nombre+".tscn")
-
-
-func _on__mouse_entered():
-	var custom_cursor_texture = load("res://cursorSeleccionar.png")
-	Input.set_custom_mouse_cursor(custom_cursor_texture, Input.CURSOR_ARROW)
-
-
-func _on__mouse_exited():
-	var custom_cursor_texture = load("res://cursor.png")
-	Input.set_custom_mouse_cursor(custom_cursor_texture, Input.CURSOR_ARROW)
+	if int(nombre) < (Simpleton.nvl_actual +1):
+		SonidoPresionarBotonMadera.stream = sonidoBoton
+		SonidoPresionarBotonMadera.play()
+		get_tree().change_scene_to_file("res://tarjetasBichos/fichaBicho"+nombre+".tscn")
+	else:
+		SonidoPresionarBotonMadera.stream = sonidoBotonBloquedo
+		SonidoPresionarBotonMadera.play()
 

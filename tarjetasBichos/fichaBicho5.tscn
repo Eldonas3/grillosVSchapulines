@@ -92,6 +92,7 @@ offset_left = 36.0
 offset_top = 26.0
 offset_right = 112.0
 offset_bottom = 102.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_yqner")
 texture_pressed = ExtResource("8_uahoj")
 
@@ -115,6 +116,7 @@ offset_left = 1042.0
 offset_top = 22.0
 offset_right = 1118.0
 offset_bottom = 98.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_yqner")
 texture_pressed = ExtResource("8_uahoj")
 
@@ -134,9 +136,5 @@ grow_vertical = 2
 texture = ExtResource("9_oyd8a")
 flip_h = true
 
-[connection signal="mouse_entered" from="regresar" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="regresar" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
-[connection signal="mouse_entered" from="seguir" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="seguir" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed" binds= ["4"]]

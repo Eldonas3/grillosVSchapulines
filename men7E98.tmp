@@ -6,16 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dfpjva5u4a0v6" path="res://botones/botonRectangular.png" id="5_hop4w"]
 [ext_resource type="Texture2D" uid="uid://du05p2lq8shu4" path="res://fondoTituloPrincipal.png" id="5_uagoa"]
 [ext_resource type="Texture2D" uid="uid://bhrf536363qb" path="res://botones/botonRectangularPresionado.png" id="6_bn7so"]
-
-[sub_resource type="GDScript" id="GDScript_vos4h"]
-script/source = "extends TextureButton
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	tooltip_text = \"Mensaje de hint\"
-
-"
+[ext_resource type="Script" path="res://jugar.gd" id="7_ledu1"]
 
 [node name="menu_inicial" type="Node2D"]
 script = ExtResource("1_2qhmk")
@@ -89,7 +80,7 @@ offset_bottom = 596.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_hop4w")
 texture_pressed = ExtResource("6_bn7so")
-script = SubResource("GDScript_vos4h")
+script = ExtResource("7_ledu1")
 
 [node name="Label" type="Label" parent="jugar"]
 layout_mode = 1

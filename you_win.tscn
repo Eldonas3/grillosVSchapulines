@@ -20,6 +20,7 @@ offset_left = 415.0
 offset_top = 433.0
 offset_right = 734.0
 offset_bottom = 601.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_yyi4v")
 texture_pressed = ExtResource("4_mo3ae")
 
@@ -67,6 +68,4 @@ text = "¡¡¡Ganaste!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="mouse_entered" from="jugar" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="jugar" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
