@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="7_yu6iv"]
 [ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="8_4uv7w"]
 
-[node name="fichaSaltamontes" type="Node2D"]
+[node name="fichaChapulin" type="Node2D"]
 script = ExtResource("1_fvrtr")
 
 [node name="bicho" type="Sprite2D" parent="."]
@@ -135,5 +135,9 @@ grow_vertical = 2
 texture = ExtResource("8_4uv7w")
 flip_h = true
 
+[connection signal="mouse_entered" from="regresar" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="regresar" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
+[connection signal="mouse_entered" from="seguir" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="seguir" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed" binds= ["2"]]

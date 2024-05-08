@@ -25,3 +25,13 @@ func _on__pressed(nombre):
 	SonidoPresionarBotonMadera.play()
 	get_tree().change_scene_to_file("res://tarjetasBichos/fichaBicho"+nombre+".tscn")
 
+
+func _on__mouse_entered():
+	var custom_cursor_texture = load("res://cursorSeleccionar.png")
+	Input.set_custom_mouse_cursor(custom_cursor_texture, Input.CURSOR_ARROW)
+
+
+func _on__mouse_exited():
+	var custom_cursor_texture = load("res://cursor.png")
+	Input.set_custom_mouse_cursor(custom_cursor_texture, Input.CURSOR_ARROW)
+

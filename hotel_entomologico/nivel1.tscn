@@ -179,9 +179,11 @@ scale = Vector2(1.689, 1.458)
 texture = ExtResource("6_01nar")
 
 [node name="Chapulin" parent="." instance=ExtResource("7_ra2to")]
+z_index = 3
 position = Vector2(558, 625)
 
 [node name="Chapulin2" parent="." instance=ExtResource("7_ra2to")]
+z_index = 1
 position = Vector2(879, 64)
 
 [node name="Chapulin3" parent="." instance=ExtResource("7_ra2to")]
@@ -232,4 +234,6 @@ texture = ExtResource("10_leq2q")
 [connection signal="area_shape_exited" from="area_jumil" to="." method="_on_area_jumil_area_shape_exited"]
 [connection signal="area_shape_entered" from="area_escarabajo" to="." method="_on_area_escarabajo_area_shape_entered"]
 [connection signal="area_shape_exited" from="area_escarabajo" to="." method="_on_area_escarabajo_area_shape_exited"]
+[connection signal="mouse_entered" from="regresar" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="regresar" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]

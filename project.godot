@@ -22,6 +22,10 @@ SonidoFondo="*res://sonido_fondo.tscn"
 SonidoPresionarBotonMadera="*res://sonido_presionar_boton_madera.tscn"
 Win="*res://win.tscn"
 
+[display]
+
+mouse_cursor/custom_image="res://cursor.png"
+
 [input]
 
 left_click={
@@ -33,3 +37,4 @@ left_click={
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

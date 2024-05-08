@@ -17,3 +17,13 @@ func _on_seguir_pressed(nivel):
 	SonidoPresionarBotonMadera.stream = sonidoBoton
 	SonidoPresionarBotonMadera.play()
 	get_tree().change_scene_to_file("res://hotel_entomologico/nivel"+nivel+".tscn")
+	
+
+func _on_mouse_entered():
+	var custom_cursor_texture = load("res://cursorSeleccionar.png")
+	Input.set_custom_mouse_cursor(custom_cursor_texture, Input.CURSOR_ARROW)
+
+func _on_mouse_exited():
+	var custom_cursor_texture = load("res://cursor.png")
+	Input.set_custom_mouse_cursor(custom_cursor_texture, Input.CURSOR_ARROW)
+

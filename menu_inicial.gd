@@ -17,3 +17,11 @@ func _on_salir_pressed():
 	SonidoPresionarBotonMadera.stream = sonidoBoton
 	SonidoPresionarBotonMadera.play()
 	get_tree().quit()
+
+func _on_mouse_entered():
+	var custom_cursor_texture = load("res://cursorSeleccionar.png")
+	Input.set_custom_mouse_cursor(custom_cursor_texture, Input.CURSOR_ARROW)
+
+func _on_mouse_exited():
+	var custom_cursor_texture = load("res://cursor.png")
+	Input.set_custom_mouse_cursor(custom_cursor_texture, Input.CURSOR_ARROW)

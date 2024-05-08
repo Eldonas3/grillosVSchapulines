@@ -10,38 +10,10 @@
 [node name="menu_inicial" type="Node2D"]
 script = ExtResource("1_2qhmk")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="fondo" type="Sprite2D" parent="."]
 position = Vector2(579, 322)
 scale = Vector2(0.598958, 0.603704)
 texture = ExtResource("2_q4c41")
-
-[node name="jugar" type="TextureButton" parent="."]
-offset_left = 180.0
-offset_top = 428.0
-offset_right = 499.0
-offset_bottom = 596.0
-texture_normal = ExtResource("5_hop4w")
-texture_pressed = ExtResource("6_bn7so")
-
-[node name="Label" type="Label" parent="jugar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -6.0
-offset_top = 13.0
-offset_right = -6.0
-offset_bottom = -16.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_hfug5")
-theme_override_font_sizes/font_size = 80
-text = "JUGAR"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="salir" type="TextureButton" parent="."]
 offset_left = 664.0
@@ -98,5 +70,37 @@ CHAPULINES"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
+[node name="jugar" type="TextureButton" parent="."]
+offset_left = 180.0
+offset_top = 428.0
+offset_right = 499.0
+offset_bottom = 596.0
+texture_normal = ExtResource("5_hop4w")
+texture_pressed = ExtResource("6_bn7so")
+
+[node name="Label" type="Label" parent="jugar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = 13.0
+offset_right = -6.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_hfug5")
+theme_override_font_sizes/font_size = 80
+text = "JUGAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="salir" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="salir" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]
+[connection signal="mouse_entered" from="jugar" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="jugar" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]

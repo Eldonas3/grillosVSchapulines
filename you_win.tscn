@@ -63,8 +63,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("5_bckhk")
 theme_override_font_sizes/font_size = 80
-text = "Ganaste!!!"
+text = "¡¡¡Ganaste!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="mouse_entered" from="jugar" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="jugar" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
