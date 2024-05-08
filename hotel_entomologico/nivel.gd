@@ -5,8 +5,8 @@ var counter_bichos_totales = Simpleton.nvl_actual + 6
 var sonidoBoton = preload("res://sonidos/click-button.mp3")
 
 func _ready():
-
 	set_process(true)
+	Simpleton.nvls.append(10)
 
 func _process(delta):
 	pass

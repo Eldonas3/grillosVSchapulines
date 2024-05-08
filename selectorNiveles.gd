@@ -11,12 +11,16 @@ func _ready():
 	
 	for botones in $GridContainer.get_children():
 		if contador < Simpleton.nvl_actual:
+			if 0 < len(Simpleton.nvls):
+				botones.get_node("ColorRect/puntos").text = str(Simpleton.nvls[contador])
+			else:
+				botones.get_node("ColorRect/puntos").text = "Jugar"
 			contador += 1
 			botones.get_node("Label").text = botones.name
 			botones.get_node("Label").modulate = "000000"
 			botones.tooltip_text = "Ir al nivel " + str(contador)
 		else:
-			botones.self_modulate = "000000"
+			botones.modulate = "000000"
 			botones.tooltip_text = "Nivel no desbloqueado"
 
 
