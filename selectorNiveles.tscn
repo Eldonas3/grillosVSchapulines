@@ -23,12 +23,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -439.0
+offset_top = -160.0
+offset_right = 461.0
+offset_bottom = 187.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 60
 columns = 5
 
 [node name="1" parent="GridContainer" instance=ExtResource("1_6bkam")]
@@ -88,7 +90,7 @@ texture = ExtResource("5_5lt85")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(579, 322)
+position = Vector2(577, 320)
 scale = Vector2(0.598958, 0.603704)
 texture = ExtResource("6_p7lck")
 

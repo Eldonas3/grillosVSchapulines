@@ -39,4 +39,3 @@ func _on__pressed(nombre):
 	else:
 		SonidoPresionarBotonMadera.stream = sonidoBotonBloquedo
 		SonidoPresionarBotonMadera.play()
-

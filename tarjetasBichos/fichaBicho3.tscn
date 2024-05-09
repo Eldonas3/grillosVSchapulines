@@ -19,8 +19,8 @@ scale = Vector2(0.602865, 0.474609)
 texture = ExtResource("2_7aomf")
 
 [node name="tarjeta" type="Sprite2D" parent="."]
-position = Vector2(584.653, 325.039)
-scale = Vector2(1.51985, 1.37196)
+position = Vector2(582, 325)
+scale = Vector2(0.75, 0.68)
 texture = ExtResource("3_270th")
 
 [node name="nombreComun" type="Label" parent="."]
