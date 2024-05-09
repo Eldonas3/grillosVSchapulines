@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgwmdpa2phecu"]
+[gd_scene load_steps=5 format=3 uid="uid://dgwmdpa2phecu"]
 
 [ext_resource type="Texture2D" uid="uid://dil50iolp2raa" path="res://botones/botonCuadrado.png" id="1_qwvec"]
 [ext_resource type="Texture2D" uid="uid://enk7r6a7eqfa" path="res://botones/botonCuadradoPresionado.png" id="2_nmv24"]
 [ext_resource type="FontFile" uid="uid://cvqrde66lk18q" path="res://tipografia/04B_30__.TTF" id="3_l5ets"]
+[ext_resource type="Texture2D" uid="uid://dbmfluxomffo3" path="res://EstrellaPuntos.png" id="4_6m7x4"]
 
 [node name="1" type="TextureButton"]
 offset_right = 40.0
@@ -12,20 +13,24 @@ texture_pressed = ExtResource("2_nmv24")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 8.0
-offset_bottom = -54.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.5
+offset_top = -91.5
+offset_right = 22.5
+offset_bottom = 53.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_l5ets")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 70
 text = "
-"
+1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -49,3 +54,23 @@ theme_override_fonts/font = ExtResource("3_l5ets")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="estrellaIzquierda" type="Sprite2D" parent="."]
+modulate = Color(0.317647, 0.317647, 0.317647, 1)
+position = Vector2(7.96925, 7.59921)
+rotation = -0.179303
+scale = Vector2(0.127879, 0.118873)
+texture = ExtResource("4_6m7x4")
+
+[node name="estrellaDerecha" type="Sprite2D" parent="."]
+modulate = Color(0.317647, 0.317647, 0.317647, 1)
+position = Vector2(141, 11)
+rotation = 0.341523
+scale = Vector2(0.127603, 0.125673)
+texture = ExtResource("4_6m7x4")
+
+[node name="estrellaCentro" type="Sprite2D" parent="."]
+modulate = Color(0.317647, 0.317647, 0.317647, 1)
+position = Vector2(75, -19)
+scale = Vector2(0.214, 0.184)
+texture = ExtResource("4_6m7x4")
