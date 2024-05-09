@@ -1,49 +1,45 @@
-[gd_scene load_steps=12 format=3 uid="uid://di1as47dqw8m1"]
+[gd_scene load_steps=12 format=3 uid="uid://5tmqn6bkhvib"]
 
 [ext_resource type="Script" path="res://tarjetasBichos/fichaBicho1.gd" id="1_deixq"]
 [ext_resource type="Texture2D" uid="uid://cbgtpvx01t37f" path="res://tarjetasBichos/fondoInsecto.jpg" id="2_hbai5"]
 [ext_resource type="Texture2D" uid="uid://d0gci4nch40pn" path="res://tarjetasBichos/FichaBase.png" id="2_ua6yr"]
-[ext_resource type="Texture2D" uid="uid://dtpdi4hhxy0v4" path="res://iconos/omnivoro.png" id="3_bwu1c"]
+[ext_resource type="Texture2D" uid="uid://dd7u3gjrtm0y2" path="res://iconos/herbivoro.png" id="4_43sfy"]
 [ext_resource type="FontFile" uid="uid://8a6i4hqyn1ap" path="res://tipografia/Deep Hero.ttf" id="4_ps6cc"]
 [ext_resource type="Texture2D" uid="uid://duacvnl3edgud" path="res://backgrounds/propuestaBackgroundLibreria.png" id="4_ssgc5"]
 [ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="5_1sd3t"]
 [ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="6_0youl"]
 [ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="7_ncixg"]
-[ext_resource type="Texture2D" uid="uid://cnqf01giabkvt" path="res://imagenesInsectos/grillo.png" id="10_2e38t"]
-[ext_resource type="Texture2D" uid="uid://dsulubfqgbsop" path="res://diagramaCalorias/1.png" id="11_ohp1j"]
+[ext_resource type="Texture2D" uid="uid://b1fcai1yy7t6o" path="res://imagenesInsectos/chapulin.png" id="10_vljkf"]
+[ext_resource type="Texture2D" uid="uid://0dxuf3d06dsl" path="res://diagramaCalorias/2.png" id="11_q36ep"]
 
-[node name="fichaGrillo" type="Node2D"]
+[node name="fichaChapulin" type="Node2D"]
 script = ExtResource("1_deixq")
 
-[node name="fondoBicho" type="Sprite2D" parent="."]
-position = Vector2(592, 183)
-scale = Vector2(0.162893, 0.117347)
-texture = ExtResource("2_hbai5")
-
 [node name="tarjeta" type="Sprite2D" parent="."]
-position = Vector2(578.5, 323)
-scale = Vector2(0.725, 0.688)
+position = Vector2(586, 325)
+scale = Vector2(0.746, 0.688)
 texture = ExtResource("2_ua6yr")
 
 [node name="nombreComun" type="Label" parent="."]
 offset_left = 365.653
 offset_top = 20.039
-offset_right = 508.653
+offset_right = 516.653
 offset_bottom = 70.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ps6cc")
 theme_override_font_sizes/font_size = 36
-text = "GRILLO"
+text = "CHAPULIN
+"
 
 [node name="nombreCientifico" type="Label" parent="."]
 offset_left = 365.653
 offset_top = 298.039
-offset_right = 574.653
+offset_right = 656.653
 offset_bottom = 326.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ps6cc")
 theme_override_font_sizes/font_size = 20
-text = "ACHETA DOMESTICUS"
+text = "Sphenarium purpurascens"
 
 [node name="tamanio" type="Label" parent="."]
 offset_left = 390.653
@@ -53,18 +49,18 @@ offset_bottom = 595.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ps6cc")
 theme_override_font_sizes/font_size = 22
-text = "1.9 - 3.0 cm"
+text = "0.7 - 2.1 cm"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="cuerpo" type="Label" parent="."]
-offset_left = 377.653
-offset_top = 377.039
-offset_right = 815.653
-offset_bottom = 467.039
+offset_left = 378.0
+offset_top = 377.0
+offset_right = 791.0
+offset_bottom = 467.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Cuerpo esbelto cilíndrico, con 3 patas articuladas y antenas que pueden ser más largas que su cuerpo."
+text = "Cuerpo robusto y alargado, con ojos muy  grandes para su cabeza triangular y unas antenas delgadas"
 autowrap_mode = 2
 
 [node name="color" type="Label" parent="."]
@@ -74,18 +70,18 @@ offset_right = 672.653
 offset_bottom = 549.039
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Café a negro/marrón amarillento con franjas oscuras en la cabeza y abdomen."
+text = "Varia de pardo oscuro a verde olivo brillante con manchas negras en todo el cuerpo "
 autowrap_mode = 2
 
 [node name="icono" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(754, 71)
 scale = Vector2(0.416424, 0.409223)
-texture = ExtResource("3_bwu1c")
+texture = ExtResource("4_43sfy")
 
 [node name="fondo" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(581.5, 324)
+position = Vector2(581, 325)
 scale = Vector2(1.86102, 2.576)
 texture = ExtResource("4_ssgc5")
 
@@ -138,16 +134,22 @@ grow_vertical = 2
 texture = ExtResource("7_ncixg")
 flip_h = true
 
-[node name="Grillo" type="Sprite2D" parent="."]
-position = Vector2(585, 183)
-scale = Vector2(0.308568, 0.268438)
-texture = ExtResource("10_2e38t")
+[node name="fondoBicho" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(592, 183)
+scale = Vector2(0.162893, 0.117347)
+texture = ExtResource("2_hbai5")
 
-[node name="1" type="Sprite2D" parent="."]
+[node name="Chapulin" type="Sprite2D" parent="."]
+position = Vector2(568.5, 207.75)
+scale = Vector2(0.332972, 0.258677)
+texture = ExtResource("10_vljkf")
+
+[node name="2" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.823529)
-position = Vector2(709.5, 548.5)
-scale = Vector2(0.14, 0.187225)
-texture = ExtResource("11_ohp1j")
+position = Vector2(717.5, 540)
+scale = Vector2(0.223849, 0.211864)
+texture = ExtResource("11_q36ep")
 
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
-[connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed" binds= ["1"]]
+[connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed" binds= ["2"]]

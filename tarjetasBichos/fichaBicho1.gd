@@ -28,6 +28,8 @@ func _on_seguir_pressed(nivel):
 		Simpleton.primeraVez = 2
 		get_tree().change_scene_to_file("res://contexto_juego.tscn")
 	else:
+		print(nivel)
 		get_tree().change_scene_to_file("res://hotel_entomologico/nivel"+nivel+".tscn")
+		
 
 

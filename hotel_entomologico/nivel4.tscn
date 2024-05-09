@@ -167,6 +167,127 @@ text = "0 pts."
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 427.0
+offset_top = 171.0
+offset_right = 567.0
+offset_bottom = 211.0
+color = Color(1, 1, 1, 0.784314)
+
+[node name="puntos" type="Label" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_gvuop")
+theme_override_font_sizes/font_size = 15
+text = "Escarabajos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 420.0
+offset_top = 449.0
+offset_right = 560.0
+offset_bottom = 489.0
+color = Color(1, 1, 1, 0.784314)
+
+[node name="puntos" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_gvuop")
+theme_override_font_sizes/font_size = 15
+text = "Escarabajos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 527.0
+offset_top = 304.0
+offset_right = 667.0
+offset_bottom = 344.0
+color = Color(1, 1, 1, 0.784314)
+
+[node name="puntos" type="Label" parent="ColorRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_gvuop")
+theme_override_font_sizes/font_size = 15
+text = "Escarabajos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 624.0
+offset_top = 167.0
+offset_right = 764.0
+offset_bottom = 207.0
+color = Color(1, 1, 1, 0.784314)
+
+[node name="puntos" type="Label" parent="ColorRect5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_gvuop")
+theme_override_font_sizes/font_size = 15
+text = "Escarabajos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 638.0
+offset_top = 449.0
+offset_right = 778.0
+offset_bottom = 489.0
+color = Color(1, 1, 1, 0.784314)
+
+[node name="puntos" type="Label" parent="ColorRect6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_gvuop")
+theme_override_font_sizes/font_size = 15
+text = "Escarabajos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="area_shape_entered" from="area_grillo" to="." method="_on_area_grillo_area_shape_entered"]
 [connection signal="area_shape_exited" from="area_grillo" to="." method="_on_area_grillo_area_shape_exited"]
 [connection signal="area_shape_entered" from="area_hormiga_chicatana" to="." method="_on_area_hormiga_chicatana_area_shape_entered"]
