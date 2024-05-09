@@ -66,9 +66,9 @@ theme_override_fonts/font = ExtResource("6_5ln3k")
 theme_override_font_sizes/font_size = 25
 text = "- Albor Barona Angel Isaac
 - Cruz Roman Miguel Angel
-- Luna Juárez Jesús
+- Luna Juarez Jesus
 - Pineda Ortiz Janeth
-- Rodríguez Ruiz Yudith"
+- Rodriguez Ruiz Yudith"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="ColorRect"]
