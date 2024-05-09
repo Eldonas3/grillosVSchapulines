@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://fl2dngd176ds"]
 
 [ext_resource type="Script" path="res://escenas_bichos/scripts_bichos/escarabajo.gd" id="1_o2kab"]
-[ext_resource type="Texture2D" uid="uid://d0nvthxqxjyku" path="res://imagenesInsectos/escarabajo-Photoroom.png-Photoroom.png" id="2_npjsu"]
+[ext_resource type="Texture2D" uid="uid://dfp5u40xdhghh" path="res://imagenesInsectos/escarabajo.png" id="2_utny5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x126p"]
-radius = 35.1283
+radius = 30.1496
 
 [node name="Escarabajo" type="Node2D"]
 position = Vector2(113, 65)
@@ -13,12 +13,13 @@ script = ExtResource("1_o2kab")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_x126p")
 
 [node name="Escarabajo-photoroom_png-photoroom" type="Sprite2D" parent="."]
-position = Vector2(2, -4)
-scale = Vector2(0.402857, 0.39916)
-texture = ExtResource("2_npjsu")
+position = Vector2(-3.46463, 2.6266)
+scale = Vector2(0.079099, 0.0686043)
+texture = ExtResource("2_utny5")
 
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

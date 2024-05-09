@@ -180,7 +180,7 @@ scale = Vector2(1.689, 1.458)
 texture = ExtResource("6_donp0")
 
 [node name="Chapulin" parent="." instance=ExtResource("7_l584d")]
-position = Vector2(957, 79)
+position = Vector2(981, 555)
 
 [node name="Chapulin2" parent="." instance=ExtResource("7_l584d")]
 position = Vector2(88, 569)
@@ -189,7 +189,7 @@ position = Vector2(88, 569)
 position = Vector2(53, 73)
 
 [node name="Grillo" parent="." instance=ExtResource("8_hdo36")]
-position = Vector2(586, 43)
+position = Vector2(632, 571)
 
 [node name="Grillo2" parent="." instance=ExtResource("8_hdo36")]
 position = Vector2(511, 574)
@@ -201,7 +201,7 @@ position = Vector2(848, 547)
 position = Vector2(273, 548)
 
 [node name="Grillo5" parent="." instance=ExtResource("8_hdo36")]
-position = Vector2(195, 31)
+position = Vector2(193, 569)
 
 [node name="regresar" type="TextureButton" parent="."]
 offset_left = 36.0
