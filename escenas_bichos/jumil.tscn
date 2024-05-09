@@ -1,9 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://bor44n3vfuh7b"]
 
 [ext_resource type="Script" path="res://escenas_bichos/scripts_bichos/jumil.gd" id="1_fb7f3"]
-[ext_resource type="Texture2D" uid="uid://xsqnrhi5wgbv" path="res://imagenesInsectos/chinchejumil-removebg-preview.png" id="2_5kukl"]
+[ext_resource type="Texture2D" uid="uid://cmirdl01olbis" path="res://imagenesInsectos/jumil.png" id="2_86ewq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e10qs"]
+radius = 16.0
 
 [node name="Jumil" type="Node2D"]
 position = Vector2(44, 29)
@@ -15,9 +16,9 @@ script = ExtResource("1_fb7f3")
 shape = SubResource("CircleShape2D_e10qs")
 
 [node name="Chinchejumil-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(-3.05176e-05, 1)
+position = Vector2(-5, 1)
 scale = Vector2(0.0422326, 0.0465802)
-texture = ExtResource("2_5kukl")
+texture = ExtResource("2_86ewq")
 
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
