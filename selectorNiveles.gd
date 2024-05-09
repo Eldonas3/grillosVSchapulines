@@ -11,10 +11,16 @@ func _ready():
 	
 	for botones in $GridContainer.get_children():
 		if contador < Simpleton.nvl_actual:
-			if 0 < len(Simpleton.nvls):
-				botones.get_node("ColorRect/puntos").text = str(Simpleton.nvls[contador])
-			else:
+			if 0 == Simpleton.nvls[contador]:
 				botones.get_node("ColorRect/puntos").text = "Jugar"
+			else:
+				botones.get_node("ColorRect/puntos").text = str(Simpleton.nvls[contador])
+				if 9 < Simpleton.nvls[contador]:
+					botones.get_node("estrellaIzquierda").modulate = "ffffff"
+				if 18 < Simpleton.nvls[contador]:
+					botones.get_node("estrellaDerecha").modulate = "ffffff"
+				if 27 < Simpleton.nvls[contador]:
+					botones.get_node("estrellaCentro").modulate = "ffffff"
 			contador += 1
 			botones.get_node("Label").text = botones.name
 			botones.get_node("Label").modulate = "000000"
@@ -39,3 +45,4 @@ func _on__pressed(nombre):
 	else:
 		SonidoPresionarBotonMadera.stream = sonidoBotonBloquedo
 		SonidoPresionarBotonMadera.play()
+

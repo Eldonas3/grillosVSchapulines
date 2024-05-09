@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c74i7sbv8d3fu"]
+
+[ext_resource type="Script" path="res://introduccion.gd" id="1_8xf2j"]
+[ext_resource type="Texture2D" uid="uid://b3p0of3faoypy" path="res://backgrounds/propuestaBackground.jpeg" id="2_xv03h"]
+
+[node name="introduccion" type="Node2D"]
+script = ExtResource("1_8xf2j")
+
+[node name="fondo" type="Sprite2D" parent="."]
+modulate = Color(0.179149, 0.505643, 0.866953, 0.635294)
+position = Vector2(576, 322)
+scale = Vector2(0.598958, 0.603704)
+texture = ExtResource("2_xv03h")

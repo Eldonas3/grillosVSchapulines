@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://bphpuduvcuybh"]
+
+[ext_resource type="Script" path="res://creditos.gd" id="1_w4yaq"]
+[ext_resource type="Texture2D" uid="uid://b3p0of3faoypy" path="res://backgrounds/propuestaBackground.jpeg" id="2_k7see"]
+[ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="3_e2c1p"]
+[ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="4_o8t4l"]
+[ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="5_epn3s"]
+[ext_resource type="FontFile" uid="uid://cvqrde66lk18q" path="res://tipografia/04B_30__.TTF" id="6_5ln3k"]
+
+[node name="creditos" type="Node2D"]
+script = ExtResource("1_w4yaq")
+
+[node name="fondo" type="Sprite2D" parent="."]
+modulate = Color(0.179149, 0.505643, 0.866953, 0.635294)
+position = Vector2(576, 322)
+scale = Vector2(0.598958, 0.603704)
+texture = ExtResource("2_k7see")
+
+[node name="regresar" type="TextureButton" parent="."]
+offset_left = 36.0
+offset_top = 26.0
+offset_right = 112.0
+offset_bottom = 102.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_e2c1p")
+texture_pressed = ExtResource("4_o8t4l")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="regresar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -32.0
+offset_right = 26.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_epn3s")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 104.0
+offset_top = 110.0
+offset_right = 1097.0
+offset_bottom = 357.0
+color = Color(1, 1, 1, 0.537255)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 427.0
+offset_top = 46.0
+offset_right = -14.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_5ln3k")
+theme_override_font_sizes/font_size = 25
+text = "- Albor Barona Angel Isaac
+- Cruz Roman Miguel Angel
+- Luna Juárez Jesús
+- Pineda Ortiz Janeth
+- Rodríguez Ruiz Yudith"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 89.0
+offset_right = 391.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_5ln3k")
+theme_override_font_sizes/font_size = 40
+text = "Estudiantes"
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 260.0
+offset_right = 992.0
+offset_bottom = 507.0
+color = Color(1, 1, 1, 0.537255)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 63.0
+offset_right = -322.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_5ln3k")
+theme_override_font_sizes/font_size = 25
+text = "- Dr. Colombo Mendoza 
+Luis Omar
+- Dra. Villalobos Espinosa
+Julieta del Carmen  
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="ColorRect/ColorRect"]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 97.0
+offset_right = 1021.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_5ln3k")
+theme_override_font_sizes/font_size = 40
+text = "Asesores"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]

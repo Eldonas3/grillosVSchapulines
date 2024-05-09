@@ -16,7 +16,10 @@ func _ready():
 func _on_jugar_pressed():
 	SonidoPresionarBotonMadera.stream = sonidoBoton
 	SonidoPresionarBotonMadera.play()
-	get_tree().change_scene_to_file("res://selectorNiveles.tscn")
+	if 1 == Simpleton.primeraVez:
+		get_tree().change_scene_to_file("res://introduccion.tscn")
+	else:
+		get_tree().change_scene_to_file("res://selectorNiveles.tscn")
 
 
 func _on_salir_pressed():
@@ -24,3 +27,9 @@ func _on_salir_pressed():
 	SonidoPresionarBotonMadera.play()
 	get_tree().quit()
 
+
+
+func _on_creditos_pressed():
+	SonidoPresionarBotonMadera.stream = sonidoBoton
+	SonidoPresionarBotonMadera.play()
+	get_tree().change_scene_to_file("res://creditos.tscn")

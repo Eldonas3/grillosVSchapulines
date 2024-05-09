@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://deerec2lnou8p"]
+[gd_scene load_steps=10 format=3 uid="uid://deerec2lnou8p"]
 
 [ext_resource type="Script" path="res://menu_inicial.gd" id="1_2qhmk"]
 [ext_resource type="Texture2D" uid="uid://b3p0of3faoypy" path="res://backgrounds/propuestaBackground.jpeg" id="2_q4c41"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dfpjva5u4a0v6" path="res://botones/botonRectangular.png" id="5_hop4w"]
 [ext_resource type="Texture2D" uid="uid://du05p2lq8shu4" path="res://fondoTituloPrincipal.png" id="5_uagoa"]
 [ext_resource type="Texture2D" uid="uid://bhrf536363qb" path="res://botones/botonRectangularPresionado.png" id="6_bn7so"]
+[ext_resource type="Texture2D" uid="uid://cnts03eu268oh" path="res://botones/rectanguloPequeño.png" id="7_pk3im"]
+[ext_resource type="Texture2D" uid="uid://oc6aowxs5h5p" path="res://botones/rectanguloPequeñoPresionado.png" id="8_oh1ma"]
 
 [sub_resource type="GDScript" id="GDScript_vos4h"]
 script/source = "extends TextureButton
@@ -111,6 +113,32 @@ text = "JUGAR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="creditos" type="TextureButton" parent="."]
+offset_left = 1019.0
+offset_top = 23.0
+offset_right = 1121.0
+offset_bottom = 71.0
+texture_normal = ExtResource("7_pk3im")
+texture_pressed = ExtResource("8_oh1ma")
+
+[node name="Label" type="Label" parent="creditos"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 8.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Créditos"
+
 [connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]
 [connection signal="mouse_entered" from="jugar" to="." method="_on_jugar_mouse_entered"]
 [connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
