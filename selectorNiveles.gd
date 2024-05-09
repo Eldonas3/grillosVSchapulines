@@ -14,7 +14,7 @@ func _ready():
 			if 0 == Simpleton.nvls[contador]:
 				botones.get_node("ColorRect/puntos").text = "Jugar"
 			else:
-				botones.get_node("ColorRect/puntos").text = str(Simpleton.nvls[contador])
+				botones.get_node("ColorRect/puntos").text = str(Simpleton.nvls[contador]) + " pts."
 				if 9 < Simpleton.nvls[contador]:
 					botones.get_node("estrellaIzquierda").modulate = "ffffff"
 				if 18 < Simpleton.nvls[contador]:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cm1ldep7hex8i"]
+[gd_scene load_steps=17 format=3 uid="uid://cm1ldep7hex8i"]
 
 [ext_resource type="Script" path="res://hotel_entomologico/nivel.gd" id="1_pqn34"]
 [ext_resource type="Texture2D" uid="uid://cujo1s1238teh" path="res://backgrounds/propuestaBackground2.jpeg" id="3_syx6v"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="9_a2ve6"]
 [ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="10_u6snv"]
 [ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="11_kw8mp"]
+[ext_resource type="FontFile" uid="uid://cvqrde66lk18q" path="res://tipografia/04B_30__.TTF" id="11_x15cn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt0ue"]
 size = Vector2(79, 48)
@@ -130,6 +131,27 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("11_kw8mp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 991.0
+offset_top = 23.0
+offset_right = 1131.0
+offset_bottom = 63.0
+color = Color(1, 1, 1, 0.65098)
+
+[node name="puntos" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_x15cn")
+theme_override_font_sizes/font_size = 15
+text = "0 pts."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="area_shape_entered" from="area_grillo" to="." method="_on_area_grillo_area_shape_entered"]
 [connection signal="area_shape_exited" from="area_grillo" to="." method="_on_area_grillo_area_shape_exited"]
