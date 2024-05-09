@@ -41,6 +41,7 @@ func _on__pressed(nombre):
 	if int(nombre) < (Simpleton.nvl_actual +1):
 		SonidoPresionarBotonMadera.stream = sonidoBoton
 		SonidoPresionarBotonMadera.play()
+		Simpleton.nvl_juegando = int(nombre)
 		get_tree().change_scene_to_file("res://tarjetasBichos/fichaBicho"+nombre+".tscn")
 	else:
 		SonidoPresionarBotonMadera.stream = sonidoBotonBloquedo

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://hfh5x4v840sy"]
+[gd_scene load_steps=8 format=3 uid="uid://hfh5x4v840sy"]
 
 [ext_resource type="Script" path="res://you_win.gd" id="1_pq8mf"]
 [ext_resource type="Texture2D" uid="uid://b3p0of3faoypy" path="res://backgrounds/propuestaBackground.jpeg" id="2_wdwta"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bhrf536363qb" path="res://botones/botonRectangularPresionado.png" id="4_mo3ae"]
 [ext_resource type="FontFile" uid="uid://cltbjfo3rmrjk" path="res://tipografia/Blockbuster- DEMO.otf" id="5_bckhk"]
 [ext_resource type="Texture2D" uid="uid://du05p2lq8shu4" path="res://fondoTituloPrincipal.png" id="6_k5fp4"]
+[ext_resource type="Texture2D" uid="uid://dbmfluxomffo3" path="res://EstrellaPuntos.png" id="7_3oh71"]
 
 [node name="menu_inicial" type="Node2D"]
 script = ExtResource("1_pq8mf")
@@ -67,5 +68,22 @@ theme_override_font_sizes/font_size = 80
 text = "¡¡¡Ganaste!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="estrellaIzquierda" type="Sprite2D" parent="."]
+position = Vector2(503.757, 101.599)
+rotation = -0.179303
+scale = Vector2(0.127879, 0.118873)
+texture = ExtResource("7_3oh71")
+
+[node name="estrellaDerecha" type="Sprite2D" parent="."]
+position = Vector2(636.788, 105)
+rotation = 0.341523
+scale = Vector2(0.127603, 0.125673)
+texture = ExtResource("7_3oh71")
+
+[node name="estrellaCentro" type="Sprite2D" parent="."]
+position = Vector2(570.788, 75)
+scale = Vector2(0.214, 0.184)
+texture = ExtResource("7_3oh71")
 
 [connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]

@@ -22,7 +22,12 @@ func _on_regresar_pressed():
 func _on_seguir_pressed(nivel):
 	SonidoPresionarBotonMadera.stream = sonidoBoton
 	SonidoPresionarBotonMadera.play()
-	get_tree().change_scene_to_file("res://hotel_entomologico/nivel"+nivel+".tscn")
 	
+	if 0 == Simpleton.primeraVez:
+		Simpleton.nvl_juegando = int(nivel)
+		Simpleton.primeraVez = 2
+		get_tree().change_scene_to_file("res://contexto_juego.tscn")
+	else:
+		get_tree().change_scene_to_file("res://hotel_entomologico/nivel"+nivel+".tscn")
 
 

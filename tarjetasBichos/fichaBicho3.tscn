@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://cyo5v24tei1a4"]
+[gd_scene load_steps=12 format=3 uid="uid://cyo5v24tei1a4"]
 
 [ext_resource type="Script" path="res://tarjetasBichos/fichaBicho1.gd" id="1_je0pl"]
-[ext_resource type="Texture2D" uid="uid://cyjbgw8blmssi" path="res://imagenesInsectos/jumil.jpg" id="2_7aomf"]
 [ext_resource type="Texture2D" uid="uid://d0gci4nch40pn" path="res://tarjetasBichos/FichaBase.png" id="3_270th"]
 [ext_resource type="FontFile" uid="uid://8a6i4hqyn1ap" path="res://tipografia/Deep Hero.ttf" id="4_br4eo"]
 [ext_resource type="Texture2D" uid="uid://duacvnl3edgud" path="res://backgrounds/propuestaBackgroundLibreria.png" id="5_7vppm"]
@@ -9,14 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="6_wl7ew"]
 [ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="7_o2hbw"]
 [ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="8_q11tp"]
+[ext_resource type="Texture2D" uid="uid://cbgtpvx01t37f" path="res://tarjetasBichos/fondoInsecto.jpg" id="9_45n5i"]
+[ext_resource type="Texture2D" uid="uid://cmirdl01olbis" path="res://imagenesInsectos/jumil.png" id="10_1odar"]
+[ext_resource type="Texture2D" uid="uid://dgofmalcf75uc" path="res://diagramaCalorias/3.png" id="11_fcang"]
 
 [node name="fichaJumil" type="Node2D"]
 script = ExtResource("1_je0pl")
-
-[node name="bicho" type="Sprite2D" parent="."]
-position = Vector2(584.5, 188.5)
-scale = Vector2(0.602865, 0.474609)
-texture = ExtResource("2_7aomf")
 
 [node name="tarjeta" type="Sprite2D" parent="."]
 position = Vector2(582, 325)
@@ -135,6 +132,23 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_q11tp")
 flip_h = true
+
+[node name="fondoBicho" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(592, 183)
+scale = Vector2(0.162893, 0.117347)
+texture = ExtResource("9_45n5i")
+
+[node name="Jumil" type="Sprite2D" parent="."]
+position = Vector2(563, 194)
+scale = Vector2(0.264371, 0.207158)
+texture = ExtResource("10_1odar")
+
+[node name="3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(719, 547.5)
+scale = Vector2(0.313539, 0.189621)
+texture = ExtResource("11_fcang")
 
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
 [connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed" binds= ["3"]]

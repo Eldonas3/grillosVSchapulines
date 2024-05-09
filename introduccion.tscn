@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c74i7sbv8d3fu"]
+[gd_scene load_steps=7 format=3 uid="uid://c74i7sbv8d3fu"]
 
 [ext_resource type="Script" path="res://introduccion.gd" id="1_8xf2j"]
 [ext_resource type="Texture2D" uid="uid://b3p0of3faoypy" path="res://backgrounds/propuestaBackground.jpeg" id="2_xv03h"]
+[ext_resource type="FontFile" uid="uid://8a6i4hqyn1ap" path="res://tipografia/Deep Hero.ttf" id="3_d85y3"]
+[ext_resource type="Texture2D" uid="uid://cnts03eu268oh" path="res://botones/rectanguloPequeño.png" id="3_t2uis"]
+[ext_resource type="Texture2D" uid="uid://oc6aowxs5h5p" path="res://botones/rectanguloPequeñoPresionado.png" id="4_5ulrl"]
+[ext_resource type="FontFile" uid="uid://cvqrde66lk18q" path="res://tipografia/04B_30__.TTF" id="5_32mhl"]
 
 [node name="introduccion" type="Node2D"]
 script = ExtResource("1_8xf2j")
@@ -11,3 +15,64 @@ modulate = Color(0.179149, 0.505643, 0.866953, 0.635294)
 position = Vector2(576, 322)
 scale = Vector2(0.598958, 0.603704)
 texture = ExtResource("2_xv03h")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 142.0
+offset_top = 42.0
+offset_right = 1001.0
+offset_bottom = 609.0
+color = Color(1, 1, 1, 0.537255)
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.016298
+anchor_top = -0.102293
+anchor_right = 0.523865
+anchor_bottom = 0.583774
+offset_left = 37.0
+offset_top = 89.0
+offset_right = 391.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_d85y3")
+theme_override_font_sizes/font_size = 30
+text = "Se le llama \"Entomofagia\" al consumo de insectos con fines
+alimenticios por los seres humanos. Se trata de una práctica que 
+ha estado presente en las raíces mexicanas desde la época de 
+los aztecas. En este sentido, la palabra \"Entomología\" hace
+referencia a la parte de la Biología que se encarga del estudio 
+de los insectos.
+
+A continuación, conocerás un poco más acerca de los insectos 
+más consumidos en México en la época actual."
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="seguir" type="TextureButton" parent="."]
+offset_left = 516.0
+offset_top = 537.0
+offset_right = 618.0
+offset_bottom = 585.0
+texture_normal = ExtResource("3_t2uis")
+texture_pressed = ExtResource("4_5ulrl")
+
+[node name="Label" type="Label" parent="seguir"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 27.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_32mhl")
+theme_override_font_sizes/font_size = 16
+text = "Seguir"
+
+[connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed"]

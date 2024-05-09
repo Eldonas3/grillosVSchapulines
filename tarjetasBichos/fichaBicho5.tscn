@@ -1,22 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbiadfgmq7152"]
+[gd_scene load_steps=12 format=3 uid="uid://bbiadfgmq7152"]
 
 [ext_resource type="Script" path="res://tarjetasBichos/fichaBicho1.gd" id="1_tlaai"]
-[ext_resource type="Texture2D" uid="uid://cvgqi30cevxyr" path="res://imagenesInsectos/hormigafuegoeuropea.jpg" id="2_4rjn2"]
 [ext_resource type="Texture2D" uid="uid://d0gci4nch40pn" path="res://tarjetasBichos/FichaBase.png" id="3_itbha"]
 [ext_resource type="FontFile" uid="uid://8a6i4hqyn1ap" path="res://tipografia/Deep Hero.ttf" id="4_1gqgn"]
 [ext_resource type="Texture2D" uid="uid://84cpui3hg5n3" path="res://iconos/hongo.png" id="5_jpv6b"]
 [ext_resource type="Texture2D" uid="uid://duacvnl3edgud" path="res://backgrounds/propuestaBackgroundLibreria.png" id="6_qyda6"]
 [ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="7_yqner"]
 [ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="8_uahoj"]
+[ext_resource type="Texture2D" uid="uid://cbgtpvx01t37f" path="res://tarjetasBichos/fondoInsecto.jpg" id="9_d6wx4"]
 [ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="9_oyd8a"]
+[ext_resource type="Texture2D" uid="uid://ckibxytgbp7ev" path="res://imagenesInsectos/hormiga.png" id="10_40yir"]
+[ext_resource type="Texture2D" uid="uid://qdyc5ec7eubw" path="res://diagramaCalorias/5.png" id="11_jsviq"]
 
 [node name="fichaHormiga" type="Node2D"]
 script = ExtResource("1_tlaai")
-
-[node name="bicho" type="Sprite2D" parent="."]
-position = Vector2(571.5, 173.98)
-scale = Vector2(0.632468, 0.576839)
-texture = ExtResource("2_4rjn2")
 
 [node name="tarjeta" type="Sprite2D" parent="."]
 position = Vector2(565.5, 325)
@@ -135,6 +132,23 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("9_oyd8a")
 flip_h = true
+
+[node name="fondoBicho" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(580.5, 183)
+scale = Vector2(0.159175, 0.117347)
+texture = ExtResource("9_d6wx4")
+
+[node name="Hormiga" type="Sprite2D" parent="."]
+position = Vector2(584, 178)
+scale = Vector2(0.357918, 0.194143)
+texture = ExtResource("10_40yir")
+
+[node name="5" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(694, 533)
+scale = Vector2(0.197695, 0.177602)
+texture = ExtResource("11_jsviq")
 
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
 [connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed" binds= ["4"]]

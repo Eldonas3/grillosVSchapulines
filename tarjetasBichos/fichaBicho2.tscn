@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://5tmqn6bkhvib"]
+[gd_scene load_steps=12 format=3 uid="uid://5tmqn6bkhvib"]
 
 [ext_resource type="Script" path="res://tarjetasBichos/fichaBicho1.gd" id="1_fvrtr"]
-[ext_resource type="Texture2D" uid="uid://bigtwkxnt4u4q" path="res://imagenesInsectos/chapulinmilpa.jpg" id="2_mlsay"]
 [ext_resource type="Texture2D" uid="uid://d0gci4nch40pn" path="res://tarjetasBichos/FichaBase.png" id="3_t5g4w"]
 [ext_resource type="Texture2D" uid="uid://dd7u3gjrtm0y2" path="res://iconos/herbivoro.png" id="4_ljer7"]
 [ext_resource type="FontFile" uid="uid://8a6i4hqyn1ap" path="res://tipografia/Deep Hero.ttf" id="4_mbsvs"]
@@ -9,14 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://coc1nfw7xttcg" path="res://botones/botonCuadroPequeño.png" id="6_sksed"]
 [ext_resource type="Texture2D" uid="uid://gdavmpgnlfnh" path="res://botones/botonCuadroPequeñoPresionado.png" id="7_yu6iv"]
 [ext_resource type="Texture2D" uid="uid://dsbc74hxtxq3k" path="res://iconos/back.png" id="8_4uv7w"]
+[ext_resource type="Texture2D" uid="uid://cbgtpvx01t37f" path="res://tarjetasBichos/fondoInsecto.jpg" id="9_r7kua"]
+[ext_resource type="Texture2D" uid="uid://b1fcai1yy7t6o" path="res://imagenesInsectos/chapulin.png" id="10_plerp"]
+[ext_resource type="Texture2D" uid="uid://0dxuf3d06dsl" path="res://diagramaCalorias/2.png" id="11_3yinc"]
 
 [node name="fichaChapulin" type="Node2D"]
 script = ExtResource("1_fvrtr")
-
-[node name="bicho" type="Sprite2D" parent="."]
-position = Vector2(577.5, 185)
-scale = Vector2(0.436523, 0.342606)
-texture = ExtResource("2_mlsay")
 
 [node name="tarjeta" type="Sprite2D" parent="."]
 position = Vector2(586, 325)
@@ -136,6 +133,23 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_4uv7w")
 flip_h = true
+
+[node name="fondoBicho" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(592, 183)
+scale = Vector2(0.162893, 0.117347)
+texture = ExtResource("9_r7kua")
+
+[node name="Chapulin" type="Sprite2D" parent="."]
+position = Vector2(568.5, 207.75)
+scale = Vector2(0.332972, 0.258677)
+texture = ExtResource("10_plerp")
+
+[node name="2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(717.5, 540)
+scale = Vector2(0.223849, 0.211864)
+texture = ExtResource("11_3yinc")
 
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
 [connection signal="pressed" from="seguir" to="." method="_on_seguir_pressed" binds= ["2"]]
